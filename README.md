@@ -28,12 +28,26 @@ Sito personale vetrina di **Marco Costanza**: formazione, divulgazione e progett
 
 ---
 
+## Deploy su Vercel (andare in live)
+
+Il codice è su GitHub. Per mettere il sito online:
+
+1. Vai su **[vercel.com](https://vercel.com)** e accedi (o crea account).
+2. **Add New** → **Project** → **Import Git Repository**.
+3. Seleziona il repo **marco-costanza/MarcoCostanza** (collega GitHub se richiesto).
+4. Vercel rileva Next.js in automatico. Clicca **Deploy**.
+5. Al termine avrai un URL tipo `marcocostanza-xxx.vercel.app`. Puoi aggiungere un dominio (es. sottodominio) o poi spostare **marcocostanza.it** da Infomaniak a Vercel.
+
+Ogni **push** su `main` farà un nuovo deploy automatico.
+
+---
+
 ## Come lavorare sul progetto
 
 1. Modifica i file in Cursor (o chiedi all'AI).
 2. Anteprima locale: `npm run dev` (porta 3002).
 3. Fai **commit** con messaggio chiaro in italiano.
-4. Fai **push** solo quando sei soddisfatto — il sito si aggiorna in automatico su Vercel.
+4. Fai **push** quando vuoi andare in live — il sito si aggiorna in automatico su Vercel.
 
 ---
 

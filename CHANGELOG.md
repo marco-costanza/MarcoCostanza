@@ -4,6 +4,23 @@ Registro delle modifiche importanti al sito.
 
 ---
 
+## 21-02-2026 (asset da HomePage.html + layout identico)
+
+- **Download asset:** Estratti da `Workspace/HomePage.html` tutti gli URL immagini (hero, logo, partner, servizi, articoli, card, recensioni); scaricate 37 immagini in `public/images/` con struttura 2024/01, 2024/02, 2024/03, 2025/06, 2025/07, 2025/12, 2026/01, 2026/02. Script: `scripts/download-assets.sh` + `scripts/download-assets.txt`.
+- **lib/assets.ts:** Mappa centralizzata dei path (`/images/...`) per hero, logo, collaborazioni (9 partner), servizi (3), bailout, articoli (4), card (Merchandise, Affiliazioni, BlockTime, Playlist), Trustpilot, recensioni.
+- **Hero:** Sfondo blu (`bg-primary`) + immagine `Sfondo-3.png`; titolo e sottotitolo bianchi; pulsanti bianchi/outline come riferimento.
+- **Collabora con:** 9 loghi partner reali (Relai, Investing, Bitcare, BitBox, Binance, Sole 24 ore, Telelombardia, Plan B Network, XTB) con `next/image`, griglia responsive, grayscale.
+- **Servizi:** Le 3 card hanno immagine in alto (pc2, Investire-con-successo-classe-live, Foto-di-gruppo).
+- **Chi è Marco:** Layout a due colonne: testo + social a sinistra, embed YouTube “Bitcoin e diritto al risparmio” (dxQcBs2blwk) a destra.
+- **Bailout block:** Immagine Masterclass-Bitcoin-4 a sinistra, testo a destra (desktop).
+- **News e Articoli:** Sezione con sfondo blu; 4 card con immagine + titolo + link agli articoli reali su marcocostanza.it; CTA “Carica altri articoli”.
+- **4 card:** Merchandise (myspreadshop), Affiliazioni (linktr.ee), BlockTime (Spotify), Playlist YouTube: card con immagine e titolo, link esterni.
+- **Recensioni:** Sezione con immagine Trustpilot (sfondo blu).
+- **Navbar:** Logo (favicon 48x48) accanto a “Marco Costanza”.
+- **Articoli:** URL aggiornati ai permalink reali degli articoli su marcocostanza.it.
+
+---
+
 ## 21-02-2026 (allineamento a marcocostanza.it)
 
 - **Home:** Riordinata per allineamento al sito di riferimento: Hero → Collabora con → Servizi → Chi è Marco → Bailout Academy → News e Articoli → Merchandise → Affiliazioni → BlockTime → Playlist YouTube → Restiamo in contatto.

@@ -1,11 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { assets } from "@/lib/assets";
 
 export default function BailoutBlock() {
   return (
     <section className="py-16 border-t border-border bg-background-muted">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+          <div className="relative w-full md:w-1/2 aspect-video rounded-lg overflow-hidden bg-muted shrink-0">
+            <Image src={assets.bailout} alt="Bailout Academy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+          </div>
+          <div className="max-w-3xl">
           <h2 className="text-2xl font-bold text-primary mb-4">
             Bailout Academy
           </h2>
@@ -28,6 +34,7 @@ export default function BailoutBlock() {
                 Scopri su Bailout
               </Link>
             </Button>
+          </div>
           </div>
         </div>
       </div>

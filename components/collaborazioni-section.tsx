@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { assets } from "@/lib/assets";
+
 export default function CollaborazioniSection() {
   return (
     <section className="py-16 border-t border-border bg-background">
@@ -5,15 +8,16 @@ export default function CollaborazioniSection() {
         <h2 className="text-2xl font-bold text-primary text-center mb-10">
           Collabora con:
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
-          {/* Placeholder: sostituire con <Image> e loghi in public/collaborazioni/ */}
-          {[1, 2, 3, 4].map((i) => (
-            <div
-              key={i}
-              className="w-32 h-20 rounded-lg border border-border bg-background-muted flex items-center justify-center text-text-muted text-sm"
-              aria-hidden
-            >
-              Partner {i}
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-6 items-center justify-items-center max-w-5xl mx-auto">
+          {assets.collaborazioni.map(({ src, alt }) => (
+            <div key={src} className="relative w-20 h-20 grayscale opacity-80 hover:opacity-100 transition-opacity">
+              <Image
+                src={src}
+                alt={alt}
+                width={150}
+                height={150}
+                className="object-contain"
+              />
             </div>
           ))}
         </div>

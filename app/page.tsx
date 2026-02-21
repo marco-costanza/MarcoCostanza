@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,34 +12,43 @@ import { SocialLinks } from "@/components/social-links";
 import CollaborazioniSection from "@/components/collaborazioni-section";
 import BailoutBlock from "@/components/bailout-block";
 import ArticleCardsHome from "@/components/article-cards-home";
+import { assets } from "@/lib/assets";
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative py-20 md:py-28 bg-background-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+      {/* Hero - sfondo blu e immagine come riferimento */}
+      <section
+        className="relative py-20 md:py-28 bg-primary text-white overflow-hidden"
+        style={{
+          backgroundImage: `url(${assets.hero.background})`,
+          backgroundPosition: "top center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Formazione di alto livello su Bitcoin e Mercati Finanziari
           </h1>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Nella vita ci vuole Costanza. Divulgazione, consulenza 1to1 e
             percorsi formativi per muoverti con sicurezza tra finanza
             tradizionale e mondo Bitcoin.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="accent" size="lg" asChild>
+            <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-white/90">
               <Link href="/servizi">Corsi di formazione</Link>
             </Button>
-            <Button variant="accent" size="lg" asChild>
+            <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-white/90">
               <Link href="https://marcocostanza.it/formazione-1-to-1/" target="_blank" rel="noopener noreferrer">
                 Formazione 1 to 1
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="border-white text-white hover:bg-white/10">
               <Link href="/contatti">Contattami</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="border-white text-white hover:bg-white/10">
               <Link href="/chi-sono">Chi sono</Link>
             </Button>
           </div>
@@ -55,7 +65,10 @@ export default function HomePage() {
             Servizi e formazione
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
-            <Card>
+            <Card className="overflow-hidden">
+              <div className="relative w-full aspect-video bg-muted">
+                <Image src={assets.servizi.formazione1to1} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+              </div>
               <CardHeader>
                 <CardTitle>Formazione 1 to 1</CardTitle>
                 <CardDescription>
@@ -72,7 +85,10 @@ export default function HomePage() {
                 </Button>
               </CardFooter>
             </Card>
-            <Card>
+            <Card className="overflow-hidden">
+              <div className="relative w-full aspect-video bg-muted">
+                <Image src={assets.servizi.tradingAcademy} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+              </div>
               <CardHeader>
                 <CardTitle>Trading Academy</CardTitle>
                 <CardDescription>
@@ -90,7 +106,10 @@ export default function HomePage() {
                 </Button>
               </CardFooter>
             </Card>
-            <Card>
+            <Card className="overflow-hidden">
+              <div className="relative w-full aspect-video bg-muted">
+                <Image src={assets.servizi.bitcoinAcademy} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+              </div>
               <CardHeader>
                 <CardTitle>Bitcoin Academy</CardTitle>
                 <CardDescription>
@@ -112,10 +131,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Chi è Marco Costanza - dopo servizi, con social */}
+      {/* Chi è Marco Costanza - due colonne: testo + video YouTube */}
       <section className="py-16 border-t border-border bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 items-start max-w-6xl mx-auto">
+            <div className="text-center lg:text-left">
             <h2 className="text-2xl font-bold text-primary mb-4">
               Chi è Marco Costanza
             </h2>
@@ -135,10 +155,20 @@ export default function HomePage() {
               distribuite sui principali social network e considerarmi uno tra
               i maggiori esperti e divulgatori italiani di questa tecnologia.
             </p>
-            <SocialLinks iconSize={22} className="justify-center flex-wrap gap-4 mb-6" />
+            <SocialLinks iconSize={22} className="justify-center lg:justify-start flex-wrap gap-4 mb-6" />
             <Button variant="outline" asChild>
               <Link href="/chi-sono">Leggi la storia completa</Link>
             </Button>
+            </div>
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-muted shrink-0">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/dxQcBs2blwk?rel=0"
+                title="Bitcoin e diritto al risparmio - Intervento Intergruppo parlamentare Bitcoin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -149,62 +179,44 @@ export default function HomePage() {
       {/* News e Articoli */}
       <ArticleCardsHome />
 
-      {/* Merchandise - teaser */}
-      <section className="py-12 border-t border-border bg-background-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">Merchandise</h2>
-          <p className="text-text-muted mb-6 max-w-xl mx-auto">
-            Scopri i prodotti e lo shop ufficiale.
-          </p>
-          <Button variant="accent" asChild>
-            <Link href="https://marcocostanza.it/" target="_blank" rel="noopener noreferrer">
-              Scopri
+      {/* 4 card: Merchandise, Affiliazioni, BlockTime, Playlist */}
+      <section className="py-16 border-t border-border bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <Link href="https://marcocostanza.myspreadshop.net" target="_blank" rel="noopener noreferrer" className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative w-full aspect-video bg-muted">
+                <Image src={assets.cards.merchandise} alt="Merchandise" fill className="object-cover group-hover:scale-[1.02] transition-transform" sizes="(max-width: 640px) 100vw, 50vw" />
+              </div>
+              <h2 className="text-lg font-bold text-primary p-4 text-center">Merchandise</h2>
             </Link>
-          </Button>
-        </div>
-      </section>
-
-      {/* Affiliazioni - teaser */}
-      <section className="py-12 border-t border-border bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">Affiliazioni</h2>
-          <p className="text-text-muted mb-6 max-w-xl mx-auto">
-            Codici sconto e link affiliati per broker, exchange e servizi che
-            utilizzo.
-          </p>
-          <Button variant="outline" asChild>
-            <Link href="/affiliazioni">Scopri le affiliazioni</Link>
-          </Button>
-        </div>
-      </section>
-
-      {/* BlockTime - teaser */}
-      <section className="py-12 border-t border-border bg-background-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">BlockTime</h2>
-          <p className="text-text-muted mb-6 max-w-xl mx-auto">
-            Il podcast e il progetto BlockTime. Scopri tutti i progetti.
-          </p>
-          <Button variant="outline" asChild>
-            <Link href="/progetti">Scopri i progetti</Link>
-          </Button>
-        </div>
-      </section>
-
-      {/* Playlist YouTube - teaser */}
-      <section className="py-12 border-t border-border bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">
-            Playlist YouTube
-          </h2>
-          <p className="text-text-muted mb-6 max-w-xl mx-auto">
-            Video, live e contenuti sul canale YouTube.
-          </p>
-          <Button variant="accent" asChild>
-            <Link href="https://www.youtube.com/@marcocostanza_/videos" target="_blank" rel="noopener noreferrer">
-              Vai al canale
+            <Link href="https://linktr.ee/marcocostanza" target="_blank" rel="noopener noreferrer" className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative w-full aspect-video bg-muted">
+                <Image src={assets.cards.affiliazioni} alt="Affiliazioni" fill className="object-cover group-hover:scale-[1.02] transition-transform" sizes="(max-width: 640px) 100vw, 50vw" />
+              </div>
+              <h2 className="text-lg font-bold text-primary p-4 text-center">Affiliazioni</h2>
             </Link>
-          </Button>
+            <Link href="https://open.spotify.com/show/0gUVINh9VDMyJcqT3kFiMP" target="_blank" rel="noopener noreferrer" className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative w-full aspect-video bg-muted">
+                <Image src={assets.cards.blocktime} alt="BlockTime" fill className="object-cover group-hover:scale-[1.02] transition-transform" sizes="(max-width: 640px) 100vw, 50vw" />
+              </div>
+              <h2 className="text-lg font-bold text-primary p-4 text-center">BlockTime</h2>
+            </Link>
+            <Link href="https://www.youtube.com/@marcocostanza_/playlists" target="_blank" rel="noopener noreferrer" className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative w-full aspect-video bg-muted">
+                <Image src={assets.cards.playlist} alt="Playlist YouTube" fill className="object-cover group-hover:scale-[1.02] transition-transform" sizes="(max-width: 640px) 100vw, 50vw" />
+              </div>
+              <h2 className="text-lg font-bold text-primary p-4 text-center">Playlist YouTube</h2>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Recensioni / Trustpilot */}
+      <section className="py-16 border-t border-border bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden">
+            <Image src={assets.trustpilot} alt="Recensioni Trustpilot" width={1024} height={576} className="w-full h-auto object-contain" />
+          </div>
         </div>
       </section>
 

@@ -2,13 +2,15 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { SocialLinks } from "@/components/social-links";
+import CollaborazioniSection from "@/components/collaborazioni-section";
+import BailoutBlock from "@/components/bailout-block";
+import ArticleCardsHome from "@/components/article-cards-home";
 
 export default function HomePage() {
   return (
@@ -26,6 +28,14 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="accent" size="lg" asChild>
+              <Link href="/servizi">Corsi di formazione</Link>
+            </Button>
+            <Button variant="accent" size="lg" asChild>
+              <Link href="https://marcocostanza.it/formazione-1-to-1/" target="_blank" rel="noopener noreferrer">
+                Formazione 1 to 1
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
               <Link href="/contatti">Contattami</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
@@ -35,34 +45,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Bio breve */}
-      <section className="py-16 border-t border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-primary mb-4">
-              Chi è Marco Costanza
-            </h2>
-            <p className="text-text-muted leading-relaxed mb-4">
-              Marco Costanza, anno 1994. Dopo 8 anni come dipendente Enel mi
-              sono licenziato per dedicarmi a tempo pieno alla finanza e agli
-              investimenti, con un focus dal 2017 su Bitcoin.
-            </p>
-            <p className="text-text-muted leading-relaxed mb-4">
-              Nel 2024 entro nell&apos;intergruppo parlamentare &quot;Asset
-              Digitali, Blockchain e Bitcoin&quot;, portando il tema &quot;Bitcoin
-              è diritto al risparmio&quot; alla Camera dei Deputati.
-            </p>
-            <p className="text-text-muted leading-relaxed mb-6">
-              Oggi posso vantare un pubblico di oltre 100.000 persone sui
-              principali social e considerarmi uno tra i maggiori esperti e
-              divulgatori italiani di questa tecnologia.
-            </p>
-            <Button variant="outline" asChild>
-              <Link href="/chi-sono">Leggi la storia completa</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Collabora con */}
+      <CollaborazioniSection />
 
       {/* Servizi - 3 card */}
       <section className="py-16 bg-background-muted">
@@ -76,8 +60,8 @@ export default function HomePage() {
                 <CardTitle>Formazione 1 to 1</CardTitle>
                 <CardDescription>
                   Costruiamo insieme le tue competenze per muoverti con sicurezza
-                  tra finanza tradizionale e mondo Bitcoin. Videochiamate
-                  registrate, qualunque sia il tuo dubbio.
+                  tra finanza tradizionale ed il mondo Bitcoin. Qualunque sia il
+                  tuo dubbio lo risolveremo in videochiamate registrate.
                 </CardDescription>
               </CardHeader>
               <CardFooter>
@@ -92,15 +76,16 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Trading Academy</CardTitle>
                 <CardDescription>
-                  WhaleStreet: formazione pratica su trading e investimenti.
-                  Gestisci con consapevolezza il tuo denaro e comprendi le logiche
-                  della finanza.
+                  Formazione pratica e concreta per chi vuole gestire con
+                  consapevolezza il proprio denaro, comprendere le logiche della
+                  finanza e operare in modo intelligente tra investimento e
+                  speculazione. WhaleStreet.
                 </CardDescription>
               </CardHeader>
               <CardFooter>
                 <Button variant="accent" asChild className="w-full sm:w-auto">
                   <Link href="https://whalestreet.website" target="_blank" rel="noopener noreferrer">
-                    Vai a WhaleStreet
+                    Iscriviti
                   </Link>
                 </Button>
               </CardFooter>
@@ -109,15 +94,16 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Bitcoin Academy</CardTitle>
                 <CardDescription>
-                  Bailout: realtà Bitcoin-only. Masterclass in live, numero
-                  limitato di studenti. Dall&apos;acquisto alla custodia fino
-                  alla spesa, in 2 settimane.
+                  Realtà Bitcoin-only formata da un network di professionisti.
+                  Uniamo la competenza tecnica, fiscale e strategica dei
+                  migliori formatori italiani offrendo formazione di alto livello
+                  per privati ed imprese. Bailout.
                 </CardDescription>
               </CardHeader>
               <CardFooter>
                 <Button variant="accent" asChild className="w-full sm:w-auto">
                   <Link href="https://bailout.website" target="_blank" rel="noopener noreferrer">
-                    Vai a Bailout
+                    Iscriviti
                   </Link>
                 </Button>
               </CardFooter>
@@ -126,8 +112,104 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA + social */}
-      <section className="py-16 border-t border-border">
+      {/* Chi è Marco Costanza - dopo servizi, con social */}
+      <section className="py-16 border-t border-border bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold text-primary mb-4">
+              Chi è Marco Costanza
+            </h2>
+            <p className="text-text-muted leading-relaxed mb-4">
+              Marco Costanza, anno 1994. Dopo 8 anni di lavoro come dipendente
+              Enel mi sono licenziato per dedicarmi a tempo pieno
+              all&apos;approfondimento della finanza e degli investimenti con un
+              focus dal 2017 su Bitcoin.
+            </p>
+            <p className="text-text-muted leading-relaxed mb-4">
+              Nel 2024 entri nell&apos;intergruppo parlamentare &quot;Asset
+              Digitali, Blockchain e Bitcoin&quot;, portando il tema &quot;Bitcoin
+              è diritto al risparmio&quot; alla Camera dei Deputati.
+            </p>
+            <p className="text-text-muted leading-relaxed mb-6">
+              Ad oggi posso vantare un pubblico di oltre 100.000 persone
+              distribuite sui principali social network e considerarmi uno tra
+              i maggiori esperti e divulgatori italiani di questa tecnologia.
+            </p>
+            <SocialLinks iconSize={22} className="justify-center flex-wrap gap-4 mb-6" />
+            <Button variant="outline" asChild>
+              <Link href="/chi-sono">Leggi la storia completa</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Bailout Academy - blocco dedicato */}
+      <BailoutBlock />
+
+      {/* News e Articoli */}
+      <ArticleCardsHome />
+
+      {/* Merchandise - teaser */}
+      <section className="py-12 border-t border-border bg-background-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-primary mb-4">Merchandise</h2>
+          <p className="text-text-muted mb-6 max-w-xl mx-auto">
+            Scopri i prodotti e lo shop ufficiale.
+          </p>
+          <Button variant="accent" asChild>
+            <Link href="https://marcocostanza.it/" target="_blank" rel="noopener noreferrer">
+              Scopri
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Affiliazioni - teaser */}
+      <section className="py-12 border-t border-border bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-primary mb-4">Affiliazioni</h2>
+          <p className="text-text-muted mb-6 max-w-xl mx-auto">
+            Codici sconto e link affiliati per broker, exchange e servizi che
+            utilizzo.
+          </p>
+          <Button variant="outline" asChild>
+            <Link href="/affiliazioni">Scopri le affiliazioni</Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* BlockTime - teaser */}
+      <section className="py-12 border-t border-border bg-background-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-primary mb-4">BlockTime</h2>
+          <p className="text-text-muted mb-6 max-w-xl mx-auto">
+            Il podcast e il progetto BlockTime. Scopri tutti i progetti.
+          </p>
+          <Button variant="outline" asChild>
+            <Link href="/progetti">Scopri i progetti</Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Playlist YouTube - teaser */}
+      <section className="py-12 border-t border-border bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            Playlist YouTube
+          </h2>
+          <p className="text-text-muted mb-6 max-w-xl mx-auto">
+            Video, live e contenuti sul canale YouTube.
+          </p>
+          <Button variant="accent" asChild>
+            <Link href="https://www.youtube.com/@marcocostanza_/videos" target="_blank" rel="noopener noreferrer">
+              Vai al canale
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Restiamo in contatto / CTA finale */}
+      <section className="py-16 border-t border-border bg-background-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-primary mb-4">
             Restiamo in contatto

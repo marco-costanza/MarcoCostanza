@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SocialLinks } from "./social-links";
+import { FaqAccordion } from "./faq-accordion";
 
 export default function Footer() {
   return (
@@ -12,6 +13,8 @@ export default function Footer() {
           >
             Marco Costanza
           </Link>
+
+          <FaqAccordion className="text-left" />
 
           <div className="max-w-3xl space-y-3">
             <p className="text-sm text-text-muted leading-relaxed">

@@ -9,8 +9,14 @@ Registro delle modifiche importanti al sito.
 - **Fase 2:** Setup Next.js 15, Tailwind, palette (blu #466F9D/#3B95D9, nero #212121, bianco), font Roboto, Vercel Analytics, shadcn Button/Card, porta 3002
 - **Fase 3:** Navbar (menu + social + CTA), Footer (disclaimer, P.IVA, social, link privacy/cookie), componente SocialLinks
 - **Fase 4:** Homepage con hero, bio breve, 3 card servizi (1to1, WhaleStreet, Bailout), CTA e social
-- **Pagine:** Create tutte le route: /chi-sono, /servizi, /progetti, /blog, /affiliazioni, /eventi, /contatti, /privacy, /cookie (contenuto placeholder da arricchire)
-- Build OK, 11 route statiche
+- **Pagine:** Create tutte le route: /chi-sono, /servizi, /progetti, /blog, /affiliazioni, /eventi, /contatti, /privacy, /cookie
+- **Chi sono:** Bio completa, timeline (Enel, Bitcoin 2017, 100k, Parlamento 2024), social e CTA
+- **Servizi:** 3 blocchi con descrizioni e CTA (Prenota, WhaleStreet, Bailout)
+- **Progetti:** 3 card (WhaleStreet, Bailout, BlockTime) con link
+- **Blog, Affiliazioni, Eventi:** Contenuto e struttura (link a WP, prossimi/passati eventi)
+- **Contatti:** Form nome/email/messaggio con invio mailto
+- **Footer:** FAQ accordion con 5 domande (consulenza, video, contatto gratuito, rimborso, pagamento Bitcoin)
+- Build OK, 11 route
 
 ---
 

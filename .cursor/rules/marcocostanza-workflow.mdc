@@ -1,0 +1,27 @@
+# Workflow e convenzioni progetto MarcoCostanza
+
+## Contesto
+Progetto sito vetrina personale (Next.js/Tailwind). Modifiche in Cursor → commit in locale → push su GitHub solo quando richiesto → deploy automatico su Vercel. L'utente non è programmatore; preferisce spiegazioni chiare e procedure semplici.
+
+## Commit e push
+- **Commit:** solo quando l'utente lo chiede esplicitamente. Messaggio in italiano, chiaro e descrittivo (es. "Aggiungi pagina chi-sono", "Aggiorna colori hero").
+- **Push:** solo quando l'utente lo chiede esplicitamente (es. "pusha", "pubblica", "sono pronto"). Ogni push causa deploy su Vercel.
+
+## Anteprima locale
+- `npm run dev` (porta 3002).
+- http://localhost:3002
+- WhaleStreet = 3000, Bailout = 3001, MarcoCostanza = 3002.
+
+## Quando modifichi file
+1. Un commit per modifica logica, solo su richiesta.
+2. I commit sono i backup; non serve creare cartelle "backup" a mano.
+
+## Lingua
+- Risposte e messaggi in **italiano**.
+
+## Changelog
+- Per modifiche rilevanti: aggiornare `CHANGELOG.md` con data e breve descrizione.
+
+## Riferimenti
+- README.md (root progetto)
+- CHANGELOG.md

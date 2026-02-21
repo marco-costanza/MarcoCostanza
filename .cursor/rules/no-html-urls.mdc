@@ -1,0 +1,9 @@
+# URL senza estensione .html
+
+**SEMPRE** usare URL puliti, mai `.html` nei link.
+
+- Struttura file: `nome-pagina/index.html` o Next.js App Router → URL `/nome-pagina`
+- Link: `/chi-sono` ✅ — `chi-sono.html` ❌
+- La home resta `index.html` nel root o `app/page.tsx`, accessibile come `/`
+
+Valido per tutti i progetti (WhaleStreet, Bailout, MarcoCostanza).

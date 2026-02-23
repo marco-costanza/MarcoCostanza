@@ -1,15 +1,10 @@
-# Regole di progetto e push GitHub
+---
+description: Riferimento README e commit/push — regola centrale Website Master (commit e push su richiesta)
+alwaysApply: false
+---
 
-## Riferimento README.md
-- **Sempre** seguire le indicazioni di **README.md** (root progetto).
+# GUIDA e push (riferimento)
 
-## Commit e push su GitHub
-1. **Commit**: fai commit **solo quando l'utente lo richiede esplicitamente** (es. "fai commit", "committa", "salva"). Non fare commit automaticamente dopo le modifiche.
-2. **Push**: fai push **solo quando l'utente lo richiede esplicitamente** (es. "pusha", "pubblica", "sono pronto"). Non fare push automaticamente.
+Regola completa: **`Projects/Website Master/.cursor/rules/guida-e-push-github.mdc`**.
 
-**IMPORTANTE**: Quando il sito è online, ogni push causa un deploy automatico su Vercel. Quindi:
-- ✅ **Commit solo su richiesta**: salva le modifiche localmente (backup)
-- ❌ **Push solo su richiesta**: non pushare automaticamente dopo ogni modifica
-- ✅ **Preview locale**: usa `npm run dev` per vedere le modifiche senza pushare
-
-Eseguire commit e push **nella cartella MarcoCostanza**.
+Per MarcoCostanza: seguire README.md; **commit e push solo su richiesta esplicita**; anteprima `npm run dev` (porta 3002). Dettagli: `marcocostanza-workflow.mdc`.

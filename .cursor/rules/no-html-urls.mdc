@@ -1,9 +1,12 @@
-# URL senza estensione .html
+---
+description: Riferimento regola URL — vedi regola centrale in radice workspace
+alwaysApply: false
+---
 
-**SEMPRE** usare URL puliti, mai `.html` nei link.
+# URL senza .html (riferimento)
 
-- Struttura file: `nome-pagina/index.html` o Next.js App Router → URL `/nome-pagina`
-- Link: `/chi-sono` ✅ — `chi-sono.html` ❌
-- La home resta `index.html` nel root o `app/page.tsx`, accessibile come `/`
+La regola completa **URL senza estensione .html** è definita in:
 
-Valido per tutti i progetti (WhaleStreet, Bailout, MarcoCostanza).
+**`.cursor/rules/no-html-urls.mdc`** (radice workspace `~/Workspace/`).
+
+Applicare sempre: link puliti (`/nome-pagina`), mai `.html`; struttura `nome-pagina/index.html` o Next.js App Router.

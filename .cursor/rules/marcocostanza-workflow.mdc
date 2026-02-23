@@ -1,3 +1,8 @@
+---
+description: Workflow MarcoCostanza — commit/push su richiesta, porta 3002, changelog
+alwaysApply: false
+---
+
 # Workflow e convenzioni progetto MarcoCostanza
 
 ## Contesto

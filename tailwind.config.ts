@@ -71,10 +71,10 @@ const config: Config = {
       boxShadow: {
         card: "0 8px 30px -8px rgba(0, 0, 0, 0.4), 0 4px 12px -4px rgba(0, 0, 0, 0.25)",
         "card-hover": "0 12px 40px -8px rgba(0, 0, 0, 0.5), 0 6px 16px -4px rgba(0, 0, 0, 0.3)",
-        glow: "0 0 20px -4px rgba(59, 149, 217, 0.28)",
-        "glow-sm": "0 0 16px -4px rgba(59, 149, 217, 0.22)",
-        "glow-accent": "0 0 22px -4px rgba(255, 97, 2, 0.32)",
-        "glow-accent-sm": "0 0 14px -4px rgba(255, 97, 2, 0.24)",
+        glow: "0 0 28px 0 rgba(59, 149, 217, 0.45), 0 0 56px -8px rgba(59, 149, 217, 0.28)",
+        "glow-sm": "0 0 24px 0 rgba(59, 149, 217, 0.42)",
+        "glow-accent": "0 0 30px 0 rgba(255, 97, 2, 0.52), 0 0 54px -8px rgba(255, 97, 2, 0.32)",
+        "glow-accent-sm": "0 0 24px 0 rgba(255, 97, 2, 0.44)",
       },
       borderRadius: {
         DEFAULT: "8px",

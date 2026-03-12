@@ -22,12 +22,12 @@ export default function Navbar() {
   const [contactsOpen, setContactsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <nav className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/60 backdrop-blur-xl supports-[backdrop-filter]:bg-background/40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary hover:text-primary-dark transition-colors">
-            <Image src={assets.logo.favicon} alt="Marco Costanza" width={48} height={48} className="rounded" />
-            <span className="hidden sm:inline">Marco Costanza</span>
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold hover:opacity-80 transition-opacity">
+            <Image src={assets.logo.favicon} alt="Marco Costanza" width={48} height={48} className="rounded-lg shadow-sm" />
+            <span className="hidden sm:inline text-gradient-primary">Marco Costanza</span>
           </Link>
 
           {/* Desktop: link + contatti con popup */}
@@ -37,7 +37,7 @@ export default function Navbar() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                    className="text-sm font-medium text-foreground hover:text-primary transition-colors hover:shadow-glow-sm"
                   >
                     {label}
                   </Link>
@@ -56,12 +56,12 @@ export default function Navbar() {
                 Contatti
               </Button>
               {contactsOpen && (
-                <div className="absolute right-0 mt-2 w-72 rounded-lg border border-border bg-background shadow-lg p-4 z-50">
+                <div className="absolute right-0 mt-3 w-72 rounded-2xl border border-white/10 shadow-2xl p-5 z-50 glass-panel animate-in fade-in slide-in-from-top-2">
                   {/* Step 2: link principali di contatto e pagina chi sono */}
-                  <div className="space-y-2 mb-4">
+                  <div className="space-y-3 mb-5">
                     <Link
                       href="/contatti"
-                      className="flex items-center gap-2 text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      className="flex items-center gap-3 text-sm font-medium text-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-white/5"
                       onClick={() => setContactsOpen(false)}
                     >
                       <Mail size={14} aria-hidden />
@@ -72,23 +72,23 @@ export default function Navbar() {
                       className="flex items-center gap-2 text-sm font-medium text-text-primary hover:text-accent transition-colors"
                       onClick={() => setContactsOpen(false)}
                     >
-                      <User size={14} aria-hidden />
+                      <User size={16} aria-hidden />
                       <span>Chi sono</span>
                     </Link>
                     <Link
                       href="https://it.trustpilot.com/review/marcocostanza.it"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      className="flex items-center gap-3 text-sm font-medium text-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-white/5"
                       onClick={() => setContactsOpen(false)}
                     >
-                      <Star size={14} aria-hidden />
+                      <Star size={16} aria-hidden />
                       <span>Recensioni Trustpilot</span>
                     </Link>
                   </div>
                   {/* Step 3: elenco social riutilizzando il componente esistente */}
-                  <div className="border-t border-border pt-3">
-                    <p className="text-xs font-semibold text-text-muted mb-2 uppercase tracking-wide">
+                  <div className="border-t border-white/10 pt-4">
+                    <p className="text-[10px] font-bold text-muted-foreground mb-3 uppercase tracking-widest text-center">
                       Social
                     </p>
                     <SocialLinks
@@ -106,7 +106,7 @@ export default function Navbar() {
           {/* Mobile: hamburger */}
           <button
             type="button"
-            className="md:hidden p-2 text-text-primary hover:text-accent"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
             aria-label="Menu"
@@ -117,13 +117,13 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden border-t border-border py-4 space-y-4">
+          <div className="md:hidden border-t border-white/5 py-6 space-y-6 animate-in slide-in-from-top-4">
             <ul className="flex flex-col gap-2">
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="block py-2 text-text-primary hover:text-accent"
+                    className="block py-3 px-4 text-foreground hover:text-primary hover:bg-white/5 rounded-lg transition-colors"
                     onClick={() => setMobileOpen(false)}
                   >
                     {label}

@@ -29,10 +29,7 @@ export default function Navbar() {
             className="flex items-center gap-3 text-lg font-semibold text-foreground transition-opacity hover:opacity-90"
           >
             <div className="rounded-lg overflow-hidden shrink-0">
-              <Image src={assets.logo.favicon} alt="Marco Costanza" width={40} height={40} />
-            </div>
-            <div className="hidden sm:flex sm:flex-col">
-              <span className="tracking-tight brand-gradient-text">Marco Costanza</span>
+              <Image src={assets.logo.favicon} alt="Marco Costanza" width={40} height={40} className="brightness-0 invert" />
             </div>
           </Link>
 

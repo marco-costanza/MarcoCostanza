@@ -21,7 +21,7 @@ export default function Navbar() {
   const [contactsOpen, setContactsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <nav className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link
@@ -40,7 +40,7 @@ export default function Navbar() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
                   >
                     {label}
                   </Link>
@@ -106,7 +106,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="md:hidden p-2 text-muted-foreground hover:text-accent transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
             aria-label="Apri menu"

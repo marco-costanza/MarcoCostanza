@@ -13,7 +13,7 @@ import { assets } from "@/lib/assets";
 
 export default function ArticleCardsHome() {
   return (
-    <section className="py-16 border-t border-border bg-primary">
+    <section className="py-16 border-t border-border bg-gradient-to-br from-primary/90 to-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-primary-foreground text-center mb-12">
           News e Articoli

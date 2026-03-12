@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <>
       <section
-        className="relative py-16 lg:py-24 border-b border-border bg-gradient-to-br from-background via-card to-primary/5 overflow-hidden"
+        className="relative py-16 lg:py-24 border-b border-border bg-gradient-to-br from-background via-background to-primary/10 overflow-hidden"
         aria-labelledby="hero-heading"
       >
         <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/15 rounded-full filter blur-3xl opacity-70" aria-hidden />
@@ -48,7 +48,7 @@ export default function HomePage() {
                     Scopri i progetti
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="default" size="lg" asChild>
                   <Link href="/contatti">
                     Prenota una consulenza
                   </Link>
@@ -155,7 +155,7 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary to-accent text-primary-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow-accent">
             <h2 id="trustpilot-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight">
               Recensioni Verificate
             </h2>

@@ -3,7 +3,9 @@ import { SocialLinks } from "./social-links";
 
 export default function Footer() {
   return (
-    <footer className="dark-section border-t border-border">
+    <footer className="dark-section relative overflow-hidden border-t border-border">
+      <div className="pointer-events-none absolute -top-24 -left-16 h-64 w-64 rounded-full bg-primary/25 blur-3xl" aria-hidden />
+      <div className="pointer-events-none absolute -bottom-24 -right-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl" aria-hidden />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           <div className="flex flex-col space-y-4">

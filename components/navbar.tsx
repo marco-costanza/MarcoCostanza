@@ -49,7 +49,7 @@ export default function Navbar() {
             </ul>
             <div className="relative">
               <Button
-                variant="default"
+                variant="accent"
                 size="sm"
                 type="button"
                 aria-haspopup="dialog"
@@ -131,7 +131,7 @@ export default function Navbar() {
               ))}
             </ul>
             <SocialLinks iconSize={22} />
-            <Button variant="default" size="sm" asChild className="w-full">
+            <Button variant="accent" size="sm" asChild className="w-full">
               <Link href="/contatti" onClick={() => setMobileOpen(false)}>
                 Contatti
               </Link>

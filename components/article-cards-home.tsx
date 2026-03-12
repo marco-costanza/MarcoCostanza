@@ -15,12 +15,12 @@ export default function ArticleCardsHome() {
   return (
     <section className="py-16 border-t border-border bg-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <h2 className="text-3xl font-bold text-primary-foreground text-center mb-12">
           News e Articoli
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {HOME_ARTICLES.map((article, i) => (
-            <Card key={article.url + article.title} className="h-full flex flex-col overflow-hidden bg-white">
+            <Card key={article.url + article.title} className="h-full flex flex-col overflow-hidden bg-card">
               <Link href={article.url} target="_blank" rel="noopener noreferrer" className="block relative w-full aspect-video bg-muted">
                 <Image
                   src={assets.articoli[i]?.image ?? "/images/2026/02/Istituzionali-1024x576.png"}
@@ -61,7 +61,7 @@ export default function ArticleCardsHome() {
           ))}
         </div>
         <div className="text-center mt-10">
-          <Button variant="secondary" asChild className="bg-white text-primary hover:bg-white/90">
+          <Button variant="secondary" asChild className="bg-card text-primary hover:bg-card/90">
             <Link href="/blog">Carica altri articoli</Link>
           </Button>
         </div>

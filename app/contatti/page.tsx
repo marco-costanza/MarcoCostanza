@@ -87,7 +87,7 @@ export default function ContattiPage() {
         </div>
         <button
           type="submit"
-          className="rounded-md bg-accent px-6 py-3 text-white font-medium hover:bg-accent/90 transition-colors min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="rounded-md bg-accent px-6 py-3 text-accent-foreground font-medium hover:bg-accent/90 transition-colors min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           Invia messaggio
         </button>

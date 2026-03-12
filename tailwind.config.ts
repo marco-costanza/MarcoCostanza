@@ -56,6 +56,10 @@ const config: Config = {
           primary: "rgba(var(--foreground), <alpha-value>)",
           muted: "rgba(var(--muted-foreground), <alpha-value>)",
         },
+        orange: {
+          "6102": "rgba(var(--orange-6102), <alpha-value>)",
+          genesis: "rgba(var(--orange-genesis), <alpha-value>)",
+        },
       },
       fontFamily: {
         heading: ["var(--font-heading)", "system-ui", "sans-serif"],
@@ -64,6 +68,8 @@ const config: Config = {
       boxShadow: {
         glow: "0 0 60px -15px rgba(59, 149, 217, 0.35)",
         "glow-sm": "0 0 30px -10px rgba(59, 149, 217, 0.25)",
+        "glow-accent": "0 0 40px -10px rgba(255, 97, 2, 0.4)",
+        "glow-accent-sm": "0 0 24px -8px rgba(255, 97, 2, 0.3)",
       },
       borderRadius: {
         DEFAULT: "8px",

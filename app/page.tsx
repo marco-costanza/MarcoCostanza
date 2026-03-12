@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <>
       <section
-        className="relative py-16 lg:py-24 border-b border-border bg-gradient-to-br from-background via-white to-primary/5 overflow-hidden"
+        className="relative py-16 lg:py-24 border-b border-border bg-gradient-to-br from-background via-card to-primary/5 overflow-hidden"
         aria-labelledby="hero-heading"
       >
         <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/15 rounded-full filter blur-3xl opacity-70" aria-hidden />
@@ -69,7 +69,7 @@ export default function HomePage() {
       </section>
 
       <section className="relative py-16 lg:py-24 bg-muted/30 border-b border-border" aria-labelledby="formazione-heading">
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(rgb(9,9,11) 2px, transparent 2px)", backgroundSize: "32px 32px" }} aria-hidden />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(rgb(21, 44, 66) 2px, transparent 2px)", backgroundSize: "32px 32px" }} aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
@@ -167,7 +167,7 @@ export default function HomePage() {
                 variant="secondary"
                 size="lg"
                 asChild
-                className="bg-white text-foreground hover:bg-white/90 font-semibold"
+                className="bg-card text-card-foreground hover:bg-card/90 font-semibold"
               >
                 <Link
                   href="https://it.trustpilot.com/review/marcocostanza.it"
@@ -181,7 +181,7 @@ export default function HomePage() {
                 variant="outline"
                 size="lg"
                 asChild
-                className="border-white/50 text-white hover:bg-white/10 font-semibold"
+                className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-semibold"
               >
                 <Link
                   href="https://it.trustpilot.com/evaluate/marcocostanza.it"

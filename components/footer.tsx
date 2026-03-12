@@ -9,37 +9,37 @@ export default function Footer() {
           <div className="flex flex-col space-y-4">
             <Link
               href="/"
-              className="text-2xl font-bold text-white tracking-tight hover:opacity-90 transition-opacity"
+              className="text-2xl font-bold text-foreground tracking-tight hover:text-accent transition-colors"
             >
               Marco Costanza
             </Link>
-            <p className="text-sm text-white/70 leading-relaxed max-w-xs">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Formazione di alto livello su Bitcoin e mercati finanziari. Divulgazione, consulenza e percorsi con WhaleStreet e Bailout.
             </p>
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4 tracking-wide text-sm uppercase">
+            <h3 className="font-heading font-semibold text-foreground mb-4 tracking-wide text-sm uppercase">
               Sito
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/progetti" className="text-sm text-white/70 hover:text-white transition-colors">
+                <Link href="/progetti" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                   Progetti
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-white/70 hover:text-white transition-colors">
+                <Link href="/blog" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/chi-sono" className="text-sm text-white/70 hover:text-white transition-colors">
+                <Link href="/chi-sono" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                   Chi sono
                 </Link>
               </li>
               <li>
-                <Link href="/contatti" className="text-sm text-white/70 hover:text-white transition-colors">
+                <Link href="/contatti" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                   Contatti
                 </Link>
               </li>
@@ -47,39 +47,39 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4 tracking-wide text-sm uppercase">
+            <h3 className="font-heading font-semibold text-foreground mb-4 tracking-wide text-sm uppercase">
               Legale
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/privacy" className="text-sm text-white/70 hover:text-white transition-colors">
+                <Link href="/privacy" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/cookie" className="text-sm text-white/70 hover:text-white transition-colors">
+                <Link href="/cookie" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                   Cookie Policy
                 </Link>
               </li>
             </ul>
-            <p className="text-xs text-white/60 mt-4 leading-relaxed max-w-xs">
+            <p className="text-xs text-muted-foreground mt-4 leading-relaxed max-w-xs">
               Torino — P.IVA: 12044330012 —{" "}
-              <a href="mailto:info@marcocostanza.it" className="text-white/80 hover:text-white underline transition-colors">
+              <a href="mailto:info@marcocostanza.it" className="text-foreground/90 hover:text-accent underline transition-colors">
                 info@marcocostanza.it
               </a>
             </p>
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4 tracking-wide text-sm uppercase">
+            <h3 className="font-heading font-semibold text-foreground mb-4 tracking-wide text-sm uppercase">
               Social
             </h3>
             <SocialLinks iconSize={22} className="gap-3" />
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-white/50">
+        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-muted-foreground/80">
             &copy; {new Date().getFullYear()} Marco Costanza. Tutti i diritti riservati.
           </p>
         </div>

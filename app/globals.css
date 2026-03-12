@@ -4,39 +4,51 @@
 
 @layer base {
   :root {
-    /* Fonts iniettati da layout (Montserrat + Inter) */
-    /* Palette: grigio‑blu chiaro, nero #212121, blu WhaleStreet */
-    --background: 244 248 251; /* #F4F8FB, come WhaleStreet */
-    --foreground: 33 33 33; /* #212121 */
-    --card: 255 255 255; /* #FFFFFF */
-    --card-foreground: 33 33 33; /* #212121 */
+    /* Scala Blu WhaleStreet (RGB per alpha in Tailwind) */
+    --blue-abyss: 10 26 41;        /* #0A1A29 */
+    --blue-midnight: 21 44 66;     /* #152C42 Midnight Trench */
+    --blue-deep-slate: 46 76 112; /* #2E4C70 */
+    --blue-whalestreet: 70 111 157; /* #466F9D */
+    --blue-mist: 169 197 224;     /* #A9C5E0 */
+    --blue-glacier: 220 233 242;  /* #DCE9F2 Glacier Ice */
+    --blue-arctic: 244 248 251;   /* #F4F8FB Arctic Foam */
+    --blue-biolume: 59 149 217;   /* #3B95D9 */
+    /* Accenti Bailout */
+    --orange-6102: 255 97 2;      /* #FF6102 CTA */
+    --orange-genesis: 247 147 26; /* #F7931A secondario */
+
+    /* Semantica: light, appariscente, blu base + arancione dettagli */
+    --background: 244 248 251;    /* Arctic Foam */
+    --foreground: 21 44 66;       /* Midnight Trench, testo blu scuro */
+    --card: 255 255 255;
+    --card-foreground: 21 44 66;
     --popover: 255 255 255;
-    --popover-foreground: 33 33 33;
-    --primary: 70 111 157; /* #466F9D WhaleStreet Blue */
+    --popover-foreground: 21 44 66;
+    --primary: 70 111 157;        /* Whale Street Blue */
     --primary-foreground: 255 255 255;
-    --secondary: 244 248 251; /* #F4F8FB */
-    --secondary-foreground: 33 33 33;
-    --muted: 244 248 251; /* #F4F8FB */
-    --muted-foreground: 131 144 164; /* #8390A4 */
-    --accent: 59 149 217; /* #3B95D9 */
+    --secondary: 220 233 242;     /* Glacier Ice */
+    --secondary-foreground: 21 44 66;
+    --muted: 244 248 251;         /* Arctic Foam */
+    --muted-foreground: 46 76 112; /* Deep Slate */
+    --accent: 255 97 2;           /* Arancione 6102 Bailout */
     --accent-foreground: 255 255 255;
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
-    --border: 220 233 242; /* #DCE9F2 */
+    --border: 220 233 242;        /* Glacier Ice */
     --input: 220 233 242;
-    --ring: 59 149 217; /* accent */
+    --ring: 255 97 2;             /* accent arancione */
     --radius: 0.5rem;
   }
 
   .dark-section {
-    /* Sezioni scure ispirate a Bailout (nero #212121) con accenti blu */
-    --background: 33 33 33; /* #212121 */
-    --foreground: 255 255 255;
-    --card: 44 44 44;
-    --card-foreground: 255 255 255;
-    --muted: 55 65 81;
-    --muted-foreground: 203 213 225;
-    --border: 64 64 64;
+    /* Blu scuro WhaleStreet (Midnight Trench), non nero; accenti arancione */
+    --background: 21 44 66;       /* Midnight Trench #152C42 */
+    --foreground: 220 233 242;    /* Glacier Ice */
+    --card: 46 76 112;            /* Deep Slate */
+    --card-foreground: 220 233 242;
+    --muted: 46 76 112;
+    --muted-foreground: 169 197 224; /* Mist Blue */
+    --border: 70 111 157;        /* Whale Street Blue, visibile su scuro */
     background-color: rgb(var(--background));
     color: rgb(var(--foreground));
   }

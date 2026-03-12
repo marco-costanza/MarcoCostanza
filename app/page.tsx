@@ -42,6 +42,18 @@ export default function HomePage() {
                 distribuite sui principali social network e considerarmi uno tra
                 i maggiori esperti e divulgatori italiani di questa tecnologia.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
+                <Button variant="accent" size="lg" asChild>
+                  <Link href="/progetti">
+                    Scopri i progetti
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link href="/contatti">
+                    Prenota una consulenza
+                  </Link>
+                </Button>
+              </div>
             </div>
             <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border bg-muted shadow-sm shrink-0">
               <iframe
@@ -143,7 +155,7 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto bg-primary text-primary-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary to-accent text-primary-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow">
             <h2 id="trustpilot-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight">
               Recensioni Verificate
             </h2>

@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div className="page-shell">
       <section
-        className="relative py-16 lg:py-24 border-b border-primary/20 bg-gradient-to-br from-background via-card/70 to-primary/10 overflow-hidden"
+        className="relative py-16 lg:py-24 border-b border-primary/20 bg-gradient-to-br from-background via-card/70 to-transparent overflow-hidden"
         aria-labelledby="hero-heading"
       >
         <div className="absolute -top-16 -right-12 w-80 h-80 bg-primary/20 rounded-full filter blur-3xl opacity-70" aria-hidden />
@@ -46,15 +46,15 @@ export default function HomePage() {
               </p>
               <div className="mb-8 grid grid-cols-3 gap-3 text-left">
                 <div className="rounded-xl border border-primary/20 bg-background/70 px-3 py-2">
-                  <p className="text-lg font-bold text-primary">100k+</p>
+                  <p className="text-lg font-bold text-foreground">100k+</p>
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Audience</p>
                 </div>
                 <div className="rounded-xl border border-primary/20 bg-background/70 px-3 py-2">
-                  <p className="text-lg font-bold text-primary">2017</p>
+                  <p className="text-lg font-bold text-foreground">2017</p>
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Focus BTC</p>
                 </div>
                 <div className="rounded-xl border border-primary/20 bg-background/70 px-3 py-2">
-                  <p className="text-lg font-bold text-primary">2024</p>
+                  <p className="text-lg font-bold text-foreground">2024</p>
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Parlamento</p>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function HomePage() {
       </section>
 
       <section className="relative py-16 lg:py-24 bg-muted/40 border-b border-primary/15" aria-labelledby="formazione-heading">
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(rgb(21, 44, 66) 2px, transparent 2px)", backgroundSize: "32px 32px" }} aria-hidden />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(rgb(33, 33, 33) 2px, transparent 2px)", backgroundSize: "32px 32px" }} aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
@@ -175,11 +175,11 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary via-primary/80 to-accent text-primary-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow-accent border border-white/15">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-card via-cypherpunk to-accent/20 text-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow-accent border border-white/15">
             <h2 id="trustpilot-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight">
               Recensioni Verificate
             </h2>
-            <p className="text-primary-foreground/90 text-base sm:text-lg font-medium max-w-2xl mx-auto mb-8 sm:mb-10">
+            <p className="text-foreground/90 text-base sm:text-lg font-medium max-w-2xl mx-auto mb-8 sm:mb-10">
               Scopri l&apos;esperienza di chi ha già lavorato con me e, se ti va, lascia anche la tua opinione.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6">
@@ -201,7 +201,7 @@ export default function HomePage() {
                 variant="outline"
                 size="lg"
                 asChild
-                className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-semibold"
+                className="border-white/50 text-white hover:bg-white/10 font-semibold"
               >
                 <Link
                   href="https://it.trustpilot.com/evaluate/marcocostanza.it"

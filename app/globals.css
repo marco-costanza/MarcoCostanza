@@ -31,9 +31,9 @@
     --primary: 70 111 157;          /* Whale Street Blue */
     --primary-foreground: 250 250 250;
     --secondary: 46 76 112;         /* Deep Slate — secondari su dark */
-    --secondary-foreground: 220 233 242;
+    --secondary-foreground: 250 250 250; /* Whitepaper — bottoni secondari bianchi */
     --muted: 33 33 33;             /* Nero 21 — superfici alternate */
-    --muted-foreground: 169 197 224; /* Mist Blue — testo secondario */
+    --muted-foreground: 235 235 235; /* quasi bianco — contrasto su dark */
     --accent: 255 97 2;             /* Arancione 6102 */
     --accent-foreground: 255 255 255;
     --destructive: 239 68 68;
@@ -45,14 +45,14 @@
   }
 
   .dark-section {
-    /* Blocco contrastante: blu profondo per sezioni in evidenza */
-    --background: 21 44 66;         /* Midnight Trench */
-    --foreground: 244 248 251;      /* Arctic Foam */
-    --card: 46 76 112;              /* Deep Slate */
-    --card-foreground: 244 248 251;
-    --muted: 46 76 112;
-    --muted-foreground: 169 197 224;
-    --border: 70 111 157;
+    /* Blocco contrastante: nero/grigio, scritte bianche */
+    --background: 33 33 33;         /* Nero 21 */
+    --foreground: 250 250 250;      /* Whitepaper */
+    --card: 44 44 44;               /* Cypherpunk */
+    --card-foreground: 250 250 250;
+    --muted: 44 44 44;
+    --muted-foreground: 235 235 235;
+    --border: 60 60 60;
     background-color: rgb(var(--background));
     color: rgb(var(--foreground));
   }

@@ -69,10 +69,10 @@ const config: Config = {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 60px -12px rgba(59, 149, 217, 0.45)",
-        "glow-sm": "0 0 32px -8px rgba(59, 149, 217, 0.35)",
-        "glow-accent": "0 0 48px -8px rgba(255, 97, 2, 0.5)",
-        "glow-accent-sm": "0 0 28px -6px rgba(255, 97, 2, 0.4)",
+        glow: "0 0 60px -12px rgba(59, 149, 217, 0.55)",
+        "glow-sm": "0 0 36px -6px rgba(59, 149, 217, 0.45)",
+        "glow-accent": "0 0 52px -6px rgba(255, 97, 2, 0.6)",
+        "glow-accent-sm": "0 0 32px -4px rgba(255, 97, 2, 0.5)",
       },
       borderRadius: {
         DEFAULT: "8px",

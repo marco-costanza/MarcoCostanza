@@ -3,7 +3,7 @@ import { SocialLinks } from "./social-links";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-border bg-gradient-to-br from-[rgb(var(--blue-midnight))] to-[rgb(var(--blue-deep-slate))] text-primary-foreground">
+    <footer className="relative overflow-hidden border-t border-border bg-gradient-to-br from-[rgb(var(--nero-21))] to-[rgb(var(--cypherpunk))] text-primary-foreground">
       <div className="pointer-events-none absolute -top-24 -left-16 h-64 w-64 rounded-full bg-primary/25 blur-3xl" aria-hidden />
       <div className="pointer-events-none absolute -bottom-24 -right-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl" aria-hidden />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative z-10">

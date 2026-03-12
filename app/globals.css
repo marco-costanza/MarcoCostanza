@@ -13,35 +13,39 @@
     --blue-glacier: 220 233 242;    /* #DCE9F2 Glacier Ice */
     --blue-arctic: 244 248 251;     /* #F4F8FB Arctic Foam */
     --blue-biolume: 59 149 217;     /* #3B95D9 */
+    /* Neutri Bailout (scala neri/grigi/bianchi) */
+    --nero-21: 33 33 33;            /* #212121 */
+    --cypherpunk: 44 44 44;         /* #2C2C2C */
+    --whitepaper: 250 250 250;      /* #FAFAFA */
     /* Accenti Bailout */
     --orange-6102: 255 97 2;        /* #FF6102 CTA */
     --orange-genesis: 247 147 26;   /* #F7931A secondario */
 
-    /* Semantica: base chiara premium, meno bianca e piu' blu */
-    --background: 220 233 242;      /* Glacier Ice */
-    --foreground: 21 44 66;         /* Midnight Trench */
-    --card: 244 248 251;            /* Arctic Foam */
-    --card-foreground: 21 44 66;
-    --popover: 244 248 251;
-    --popover-foreground: 21 44 66;
+    /* Semantica: tema dark — base scura, dettagli blu, accenti arancione */
+    --background: 10 26 41;         /* Abyss Black */
+    --foreground: 250 250 250;      /* Whitepaper */
+    --card: 44 44 44;               /* Cypherpunk */
+    --card-foreground: 250 250 250;
+    --popover: 44 44 44;
+    --popover-foreground: 250 250 250;
     --primary: 70 111 157;          /* Whale Street Blue */
-    --primary-foreground: 255 255 255;
-    --secondary: 169 197 224;       /* Mist Blue */
-    --secondary-foreground: 21 44 66;
-    --muted: 214 229 241;           /* variante chiara fredda, piu' visibile */
-    --muted-foreground: 46 76 112;  /* Deep Slate */
+    --primary-foreground: 250 250 250;
+    --secondary: 46 76 112;         /* Deep Slate — secondari su dark */
+    --secondary-foreground: 220 233 242;
+    --muted: 33 33 33;             /* Nero 21 — superfici alternate */
+    --muted-foreground: 169 197 224; /* Mist Blue — testo secondario */
     --accent: 255 97 2;             /* Arancione 6102 */
     --accent-foreground: 255 255 255;
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
-    --border: 169 197 224;          /* Mist Blue */
-    --input: 169 197 224;
-    --ring: 255 97 2;
+    --border: 46 76 112;            /* Deep Slate — bordi su dark */
+    --input: 46 76 112;
+    --ring: 59 149 217;             /* Biolume per focus */
     --radius: 0.5rem;
   }
 
   .dark-section {
-    /* Sezioni d'impatto: blu profondo ma non nero */
+    /* Blocco contrastante: blu profondo per sezioni in evidenza */
     --background: 21 44 66;         /* Midnight Trench */
     --foreground: 244 248 251;      /* Arctic Foam */
     --card: 46 76 112;              /* Deep Slate */
@@ -59,8 +63,10 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased min-h-screen selection:bg-primary selection:text-primary-foreground;
-    background-image: radial-gradient(circle at 0% 0%, rgba(70, 111, 157, 0.12), transparent 45%),
-      radial-gradient(circle at 100% 0%, rgba(255, 97, 2, 0.08), transparent 38%);
+    background-image:
+      linear-gradient(180deg, rgb(var(--blue-abyss)) 0%, rgb(var(--nero-21)) 100%),
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 149, 217, 0.15), transparent 50%),
+      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(255, 97, 2, 0.06), transparent 45%);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -93,23 +99,32 @@
   .page-shell {
     @apply relative;
     background:
-      radial-gradient(900px 380px at 100% -10%, rgba(59, 149, 217, 0.14), transparent 58%),
-      radial-gradient(850px 360px at 0% 0%, rgba(255, 97, 2, 0.08), transparent 54%);
+      radial-gradient(900px 380px at 100% -10%, rgba(59, 149, 217, 0.12), transparent 58%),
+      radial-gradient(850px 360px at 0% 0%, rgba(255, 97, 2, 0.06), transparent 54%);
   }
 
   .section-surface {
-    @apply rounded-2xl border border-border bg-card/85 backdrop-blur-sm shadow-sm;
+    @apply rounded-2xl border border-primary/25 bg-card/95 backdrop-blur-sm shadow-[0_24px_50px_-34px_rgba(0,0,0,0.4)];
   }
 
   .brand-gradient-text {
-    background: linear-gradient(92deg, rgb(var(--blue-midnight)) 0%, rgb(var(--blue-whalestreet)) 45%, rgb(var(--orange-6102)) 100%);
+    background: linear-gradient(92deg, rgb(var(--blue-mist)) 0%, rgb(var(--blue-biolume)) 45%, rgb(var(--orange-6102)) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .accent-chip {
-    @apply inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent;
+    @apply inline-flex items-center rounded-full border border-accent/40 bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent;
+  }
+
+  .hero-heading {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight tracking-tight;
+  }
+
+  .premium-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(70, 111, 157, 0.5) 25%, rgba(255, 97, 2, 0.55) 50%, rgba(70, 111, 157, 0.5) 75%, transparent 100%);
   }
 
   @media (prefers-reduced-motion: reduce) {

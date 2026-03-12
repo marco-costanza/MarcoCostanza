@@ -60,16 +60,19 @@ const config: Config = {
           "6102": "rgba(var(--orange-6102), <alpha-value>)",
           genesis: "rgba(var(--orange-genesis), <alpha-value>)",
         },
+        nero: "rgba(var(--nero-21), <alpha-value>)",
+        cypherpunk: "rgba(var(--cypherpunk), <alpha-value>)",
+        whitepaper: "rgba(var(--whitepaper), <alpha-value>)",
       },
       fontFamily: {
         heading: ["var(--font-heading)", "system-ui", "sans-serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 60px -15px rgba(59, 149, 217, 0.35)",
-        "glow-sm": "0 0 30px -10px rgba(59, 149, 217, 0.25)",
-        "glow-accent": "0 0 40px -10px rgba(255, 97, 2, 0.4)",
-        "glow-accent-sm": "0 0 24px -8px rgba(255, 97, 2, 0.3)",
+        glow: "0 0 60px -12px rgba(59, 149, 217, 0.45)",
+        "glow-sm": "0 0 32px -8px rgba(59, 149, 217, 0.35)",
+        "glow-accent": "0 0 48px -8px rgba(255, 97, 2, 0.5)",
+        "glow-accent-sm": "0 0 28px -6px rgba(255, 97, 2, 0.4)",
       },
       borderRadius: {
         DEFAULT: "8px",

@@ -21,7 +21,8 @@ export default function ContattiPage() {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-2xl page-shell section-surface p-6 sm:p-8">
-      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Contatti</h1>
+      <span className="accent-chip mb-4">Marco Costanza</span>
+      <h1 className="text-3xl sm:text-4xl font-bold brand-gradient-text mb-4 tracking-tight">Contatti</h1>
       {/* Social principali */}
       <h2 className="text-xl font-semibold text-primary mb-3">
         Dove puoi trovarmi online

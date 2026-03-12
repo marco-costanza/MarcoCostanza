@@ -59,7 +59,7 @@ export default function Navbar() {
                 Contatti
               </Button>
               {contactsOpen && (
-                <div className="absolute right-0 mt-3 w-72 rounded-lg border border-border bg-popover p-5 shadow-lg z-50 animate-in fade-in slide-in-from-top-2">
+                <div className="absolute right-0 mt-3 w-72 rounded-lg border border-border bg-background p-5 shadow-lg z-50 animate-in fade-in slide-in-from-top-2">
                   <div className="space-y-3 mb-5">
                     <Link
                       href="/contatti"

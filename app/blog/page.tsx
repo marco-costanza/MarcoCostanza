@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 page-shell section-surface p-6 sm:p-8">
-      <span className="accent-chip mb-4">Marco Costanza</span>
       <h1 className="text-3xl sm:text-4xl font-bold brand-gradient-text mb-4 tracking-tight">Blog</h1>
       <p className="text-lg text-muted-foreground max-w-2xl mb-10 sm:mb-12">
         Articoli, analisi e aggiornamenti su Bitcoin e mercati. I contenuti

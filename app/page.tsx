@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { SocialLinks } from "@/components/social-links";
 import CollaborazioniSection from "@/components/collaborazioni-section";
 import { assets } from "@/lib/assets";
 

@@ -25,21 +25,36 @@ const LINKS: { href: string; label: string; Icon: LucideIcon }[] = [
 interface SocialLinksProps {
   className?: string;
   iconSize?: number;
+  layout?: "inline" | "stacked";
+  showLabels?: boolean;
 }
 
-export function SocialLinks({ className = "", iconSize = 20 }: SocialLinksProps) {
+export function SocialLinks({
+  className = "",
+  iconSize = 20,
+  layout = "inline",
+  showLabels = false,
+}: SocialLinksProps) {
+  const baseUlClasses =
+    layout === "stacked"
+      ? "flex flex-col gap-2"
+      : "flex items-center gap-4";
+
   return (
-    <ul className={`flex items-center gap-4 ${className}`} aria-label="Social e contatti">
+    <ul className={`${baseUlClasses} ${className}`} aria-label="Social e contatti">
       {LINKS.map(({ href, label, Icon }) => (
         <li key={label}>
           <Link
             href={href}
             target={href.startsWith("mailto:") ? undefined : "_blank"}
             rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-            className="text-text-muted hover:text-accent transition-colors"
+            className="flex items-center gap-2 text-text-muted hover:text-accent transition-colors"
             aria-label={label}
           >
             <Icon size={iconSize} aria-hidden />
+            {showLabels && (
+              <span className="text-sm">{label}</span>
+            )}
           </Link>
         </li>
       ))}

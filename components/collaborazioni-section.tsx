@@ -8,18 +8,26 @@ export default function CollaborazioniSection() {
         <h2 className="text-2xl font-bold text-primary text-center mb-10">
           Collabora con:
         </h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-6 items-center justify-items-center max-w-5xl mx-auto">
-          {assets.collaborazioni.map(({ src, alt }) => (
-            <div key={src} className="relative w-20 h-20 grayscale opacity-80 hover:opacity-100 transition-opacity">
-              <Image
-                src={src}
-                alt={alt}
-                width={150}
-                height={150}
-                className="object-contain"
-              />
+        {/* Scroller orizzontale con loghi in movimento manuale */}
+        <div className="relative">
+          <div className="overflow-x-auto pb-2">
+            <div className="flex gap-8 items-center min-w-max">
+              {assets.collaborazioni.map(({ src, alt }) => (
+                <div
+                  key={src}
+                  className="relative w-24 h-24 flex-shrink-0 grayscale opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src={src}
+                    alt={alt}
+                    width={150}
+                    height={150}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

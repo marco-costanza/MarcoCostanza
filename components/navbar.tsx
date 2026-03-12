@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mail, User, Star } from "lucide-react";
 import { SocialLinks } from "./social-links";
 import { Button } from "@/components/ui/button";
 import { assets } from "@/lib/assets";
@@ -61,26 +61,29 @@ export default function Navbar() {
                   <div className="space-y-2 mb-4">
                     <Link
                       href="/contatti"
-                      className="block text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      className="flex items-center gap-2 text-sm font-medium text-text-primary hover:text-accent transition-colors"
                       onClick={() => setContactsOpen(false)}
                     >
-                      Pagina contatti
+                      <Mail size={14} aria-hidden />
+                      <span>Form di contatto</span>
                     </Link>
                     <Link
                       href="/chi-sono"
-                      className="block text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      className="flex items-center gap-2 text-sm font-medium text-text-primary hover:text-accent transition-colors"
                       onClick={() => setContactsOpen(false)}
                     >
-                      Chi sono
+                      <User size={14} aria-hidden />
+                      <span>Chi sono</span>
                     </Link>
                     <Link
                       href="https://it.trustpilot.com/review/marcocostanza.it"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      className="flex items-center gap-2 text-sm font-medium text-text-primary hover:text-accent transition-colors"
                       onClick={() => setContactsOpen(false)}
                     >
-                      Recensioni Trustpilot
+                      <Star size={14} aria-hidden />
+                      <span>Recensioni Trustpilot</span>
                     </Link>
                   </div>
                   {/* Step 3: elenco social riutilizzando il componente esistente */}
@@ -88,7 +91,12 @@ export default function Navbar() {
                     <p className="text-xs font-semibold text-text-muted mb-2 uppercase tracking-wide">
                       Social
                     </p>
-                    <SocialLinks iconSize={18} className="flex-wrap gap-3" />
+                    <SocialLinks
+                      iconSize={18}
+                      layout="stacked"
+                      showLabels
+                      className="gap-2"
+                    />
                   </div>
                 </div>
               )}

@@ -57,6 +57,7 @@ export default function Navbar() {
                 aria-haspopup="dialog"
                 aria-expanded={contactsOpen}
                 onClick={() => setContactsOpen((open) => !open)}
+                className="hover:shadow-glow-sm"
               >
                 Contatti
               </Button>

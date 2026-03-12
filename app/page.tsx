@@ -99,7 +99,7 @@ export default function HomePage() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-3 max-w-6xl mx-auto">
             <Card className="flex flex-col h-full bg-card group">
               <div className="relative w-full aspect-video bg-muted overflow-hidden border-b border-border">
-                <Image src={assets.servizi.formazione1to1} alt="Formazione 1 to 1 con Marco Costanza" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src={assets.servizi.formazione1to1} alt="Formazione 1 to 1 con Marco Costanza" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <CardHeader>
                 <CardTitle>Formazione 1 to 1</CardTitle>
@@ -119,7 +119,7 @@ export default function HomePage() {
             </Card>
             <Card className="flex flex-col h-full bg-card group">
               <div className="relative w-full aspect-video bg-muted overflow-hidden border-b border-border">
-                <Image src={assets.servizi.tradingAcademy} alt="WhaleStreet Trading Academy" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src={assets.servizi.tradingAcademy} alt="WhaleStreet Trading Academy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <CardHeader>
                 <CardTitle>Trading Academy</CardTitle>
@@ -140,7 +140,7 @@ export default function HomePage() {
             </Card>
             <Card className="flex flex-col h-full bg-card group">
               <div className="relative w-full aspect-video bg-muted overflow-hidden border-b border-border">
-                <Image src={assets.servizi.bitcoinAcademy} alt="Bailout Bitcoin Academy" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src={assets.servizi.bitcoinAcademy} alt="Bailout Bitcoin Academy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <CardHeader>
                 <CardTitle>Bitcoin Academy</CardTitle>
@@ -197,7 +197,7 @@ export default function HomePage() {
                 variant="outline"
                 size="lg"
                 asChild
-                className="border-white/50 text-white hover:bg-white/10 font-semibold"
+                className="border-white/50 text-white hover:bg-white/10 hover:shadow-glow-sm font-semibold"
               >
                 <Link
                   href="https://it.trustpilot.com/evaluate/marcocostanza.it"

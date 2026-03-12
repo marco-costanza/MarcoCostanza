@@ -62,8 +62,8 @@ const config: Config = {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 40px -10px rgba(37, 99, 235, 0.25)",
-        "glow-sm": "0 0 20px -5px rgba(37, 99, 235, 0.2)",
+        glow: "0 0 60px -15px rgba(59, 149, 217, 0.35)",
+        "glow-sm": "0 0 30px -10px rgba(59, 149, 217, 0.25)",
       },
       borderRadius: {
         DEFAULT: "8px",

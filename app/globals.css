@@ -5,37 +5,38 @@
 @layer base {
   :root {
     /* Fonts iniettati da layout (Montserrat + Inter) */
-    /* Marco Costanza – identità ispirata a Bailout/WhaleStreet */
-    --background: 255 255 255;
-    --foreground: 9 9 11;
-    --card: 255 255 255;
-    --card-foreground: 9 9 11;
+    /* Palette: bianco, nero #212121, blu WhaleStreet */
+    --background: 255 255 255; /* #FFFFFF */
+    --foreground: 33 33 33; /* #212121 */
+    --card: 255 255 255; /* #FFFFFF */
+    --card-foreground: 33 33 33; /* #212121 */
     --popover: 255 255 255;
-    --popover-foreground: 9 9 11;
-    --primary: 37 99 235;
+    --popover-foreground: 33 33 33;
+    --primary: 70 111 157; /* #466F9D WhaleStreet Blue */
     --primary-foreground: 255 255 255;
-    --secondary: 244 244 245;
-    --secondary-foreground: 9 9 11;
-    --muted: 244 244 245;
-    --muted-foreground: 113 113 122;
-    --accent: 70 111 157;
+    --secondary: 244 248 251; /* #F4F8FB */
+    --secondary-foreground: 33 33 33;
+    --muted: 244 248 251; /* #F4F8FB */
+    --muted-foreground: 131 144 164; /* #8390A4 */
+    --accent: 59 149 217; /* #3B95D9 */
     --accent-foreground: 255 255 255;
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
-    --border: 228 228 231;
-    --input: 228 228 231;
-    --ring: 37 99 235;
+    --border: 220 233 242; /* #DCE9F2 */
+    --input: 220 233 242;
+    --ring: 59 149 217; /* accent */
     --radius: 0.5rem;
   }
 
   .dark-section {
-    --background: 15 23 42;
+    /* Sezioni scure ispirate a Bailout (nero #212121) con accenti blu */
+    --background: 33 33 33; /* #212121 */
     --foreground: 255 255 255;
-    --card: 30 41 59;
+    --card: 44 44 44;
     --card-foreground: 255 255 255;
-    --muted: 51 65 85;
+    --muted: 55 65 81;
     --muted-foreground: 203 213 225;
-    --border: 51 65 85;
+    --border: 64 64 64;
     background-color: rgb(var(--background));
     color: rgb(var(--foreground));
   }

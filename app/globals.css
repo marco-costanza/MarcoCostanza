@@ -7,48 +7,48 @@
     /* Scala Blu WhaleStreet (RGB per alpha in Tailwind) */
     --blue-abyss: 10 26 41;        /* #0A1A29 */
     --blue-midnight: 21 44 66;     /* #152C42 Midnight Trench */
-    --blue-deep-slate: 46 76 112; /* #2E4C70 */
+    --blue-deep-slate: 46 76 112;  /* #2E4C70 */
     --blue-whalestreet: 70 111 157; /* #466F9D */
-    --blue-mist: 169 197 224;     /* #A9C5E0 */
-    --blue-glacier: 220 233 242;  /* #DCE9F2 Glacier Ice */
-    --blue-arctic: 244 248 251;   /* #F4F8FB Arctic Foam */
-    --blue-biolume: 59 149 217;   /* #3B95D9 */
+    --blue-mist: 169 197 224;      /* #A9C5E0 */
+    --blue-glacier: 220 233 242;   /* #DCE9F2 Glacier Ice */
+    --blue-arctic: 244 248 251;    /* #F4F8FB Arctic Foam */
+    --blue-biolume: 59 149 217;    /* #3B95D9 */
     /* Accenti Bailout */
-    --orange-6102: 255 97 2;      /* #FF6102 CTA */
-    --orange-genesis: 247 147 26; /* #F7931A secondario */
+    --orange-6102: 255 97 2;       /* #FF6102 CTA */
+    --orange-genesis: 247 147 26;  /* #F7931A secondario */
 
-    /* Semantica: light, appariscente, blu base + arancione dettagli */
-    --background: 244 248 251;    /* Arctic Foam */
-    --foreground: 21 44 66;       /* Midnight Trench, testo blu scuro */
-    --card: 255 255 255;
-    --card-foreground: 21 44 66;
-    --popover: 255 255 255;
-    --popover-foreground: 21 44 66;
-    --primary: 70 111 157;        /* Whale Street Blue */
-    --primary-foreground: 255 255 255;
-    --secondary: 220 233 242;     /* Glacier Ice */
-    --secondary-foreground: 21 44 66;
-    --muted: 244 248 251;         /* Arctic Foam */
-    --muted-foreground: 46 76 112; /* Deep Slate */
-    --accent: 255 97 2;           /* Arancione 6102 Bailout */
-    --accent-foreground: 255 255 255;
+    /* Semantica: dark mode elegante, blu profondo + accenti arancioni */
+    --background: 10 26 41;        /* Abyss Black, sfondo principale */
+    --foreground: 244 248 251;     /* Arctic Foam, testo chiaro */
+    --card: 21 44 66;              /* Midnight Trench, card e blocchi */
+    --card-foreground: 244 248 251;
+    --popover: 21 44 66;
+    --popover-foreground: 244 248 251;
+    --primary: 70 111 157;         /* Whale Street Blue */
+    --primary-foreground: 244 248 251;
+    --secondary: 46 76 112;        /* Deep Slate */
+    --secondary-foreground: 244 248 251;
+    --muted: 21 44 66;             /* Midnight Trench leggermente attenuato */
+    --muted-foreground: 169 197 224; /* Mist Blue */
+    --accent: 255 97 2;            /* Arancione 6102 Bailout */
+    --accent-foreground: 10 26 41; /* testo scuro dentro pill/arancioni */
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
-    --border: 220 233 242;        /* Glacier Ice */
-    --input: 220 233 242;
-    --ring: 255 97 2;             /* accent arancione */
+    --border: 46 76 112;           /* Deep Slate */
+    --input: 46 76 112;
+    --ring: 255 97 2;              /* accent arancione */
     --radius: 0.5rem;
   }
 
   .dark-section {
-    /* Blu scuro WhaleStreet (Midnight Trench), non nero; accenti arancione */
-    --background: 21 44 66;       /* Midnight Trench #152C42 */
-    --foreground: 220 233 242;    /* Glacier Ice */
-    --card: 46 76 112;            /* Deep Slate */
-    --card-foreground: 220 233 242;
-    --muted: 46 76 112;
+    /* Sezioni ancora più profonde (footer, blocchi hero scuri) */
+    --background: 10 26 41;        /* Abyss Black */
+    --foreground: 220 233 242;     /* Glacier Ice */
+    --card: 21 44 66;              /* Midnight Trench */
+    --card-foreground: 244 248 251;
+    --muted: 21 44 66;
     --muted-foreground: 169 197 224; /* Mist Blue */
-    --border: 70 111 157;        /* Whale Street Blue, visibile su scuro */
+    --border: 70 111 157;          /* Whale Street Blue, visibile su scuro */
     background-color: rgb(var(--background));
     color: rgb(var(--foreground));
   }

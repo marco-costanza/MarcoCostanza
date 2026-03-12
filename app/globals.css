@@ -23,17 +23,17 @@
 
     /* Semantica: tema dark — base nera, scritte bianche, dettagli blu, accenti arancione */
     --background: 33 33 33;         /* Nero 21 — sfondo sul nero */
-    --foreground: 250 250 250;      /* Whitepaper — scritte bianche */
+    --foreground: 255 255 255;      /* bianco puro — scritte bianche */
     --card: 44 44 44;               /* Cypherpunk */
-    --card-foreground: 250 250 250;
+    --card-foreground: 255 255 255;
     --popover: 44 44 44;
-    --popover-foreground: 250 250 250;
+    --popover-foreground: 255 255 255;
     --primary: 70 111 157;          /* Whale Street Blue */
-    --primary-foreground: 250 250 250;
+    --primary-foreground: 255 255 255;
     --secondary: 46 76 112;         /* Deep Slate — secondari su dark */
-    --secondary-foreground: 250 250 250; /* Whitepaper — bottoni secondari bianchi */
+    --secondary-foreground: 255 255 255;
     --muted: 33 33 33;             /* Nero 21 — superfici alternate */
-    --muted-foreground: 235 235 235; /* quasi bianco — contrasto su dark */
+    --muted-foreground: 255 255 255; /* bianco puro — tutto leggibile */
     --accent: 255 97 2;             /* Arancione 6102 */
     --accent-foreground: 255 255 255;
     --destructive: 239 68 68;
@@ -47,11 +47,11 @@
   .dark-section {
     /* Blocco contrastante: nero/grigio, scritte bianche */
     --background: 33 33 33;         /* Nero 21 */
-    --foreground: 250 250 250;      /* Whitepaper */
+    --foreground: 255 255 255;
     --card: 44 44 44;               /* Cypherpunk */
-    --card-foreground: 250 250 250;
+    --card-foreground: 255 255 255;
     --muted: 44 44 44;
-    --muted-foreground: 235 235 235;
+    --muted-foreground: 255 255 255;
     --border: 60 60 60;
     background-color: rgb(var(--background));
     color: rgb(var(--foreground));
@@ -104,7 +104,7 @@
   }
 
   .section-surface {
-    @apply rounded-2xl border border-primary/25 bg-card/95 backdrop-blur-sm shadow-[0_24px_50px_-34px_rgba(0,0,0,0.4)];
+    @apply rounded-2xl border border-primary/25 bg-card/95 backdrop-blur-sm shadow-[0_24px_50px_-34px_rgba(0,0,0,0.4)] text-foreground;
   }
 
   .brand-gradient-text {

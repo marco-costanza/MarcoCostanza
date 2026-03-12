@@ -28,7 +28,7 @@ export default function HomePage() {
               <h1 id="hero-heading" className="hero-heading text-foreground mb-6">
                 Chi è Marco Costanza
               </h1>
-              <p className="text-foreground/90 leading-relaxed mb-4 text-base sm:text-lg font-medium">
+              <p className="text-foreground leading-relaxed mb-4 text-base sm:text-lg font-medium">
                 Marco Costanza, anno 1994. Dopo 8 anni di lavoro come dipendente
                 Enel mi sono licenziato per dedicarmi a tempo pieno
                 all&apos;approfondimento della finanza e degli investimenti con un
@@ -39,7 +39,7 @@ export default function HomePage() {
                 Digitali, Blockchain e Bitcoin&quot;, portando il tema &quot;Bitcoin
                 è diritto al risparmio&quot; alla Camera dei Deputati.
               </p>
-              <p className="text-foreground/90 leading-relaxed mb-8 text-base sm:text-lg font-medium">
+              <p className="text-foreground leading-relaxed mb-8 text-base sm:text-lg font-medium">
                 Ad oggi posso vantare un pubblico di oltre 100.000 persone
                 distribuite sui principali social network e considerarmi uno tra
                 i maggiori esperti e divulgatori italiani di questa tecnologia.
@@ -179,7 +179,7 @@ export default function HomePage() {
             <h2 id="trustpilot-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight">
               Recensioni Verificate
             </h2>
-            <p className="text-foreground/90 text-base sm:text-lg font-medium max-w-2xl mx-auto mb-8 sm:mb-10">
+            <p className="text-foreground text-base sm:text-lg font-medium max-w-2xl mx-auto mb-8 sm:mb-10">
               Scopri l&apos;esperienza di chi ha già lavorato con me e, se ti va, lascia anche la tua opinione.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6">

@@ -240,15 +240,9 @@ export default function AffiliazioniPage() {
               >
                 Affiliazioni
               </h1>
-              <p className="text-muted-foreground text-lg max-w-xl mb-6">
+              <p className="text-muted-foreground text-lg max-w-xl">
                 Link affiliati e codici sconto che utilizzo. Usandoli supporti il mio lavoro senza costi extra per te.
               </p>
-              <Button variant="accent" size="lg" asChild>
-                <a href="#categorie" className="inline-flex items-center gap-2">
-                  Scopri le offerte
-                  <ExternalLink className="size-4" aria-hidden />
-                </a>
-              </Button>
             </div>
             <div className="order-1 lg:order-2 relative w-full aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-card shrink-0">
               <Image
@@ -324,8 +318,9 @@ export default function AffiliazioniPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2"
+                                aria-label={`Apri ${item.name}`}
                               >
-                                Vai al sito
+                                Apri
                                 <ExternalLink className="size-3.5" aria-hidden />
                               </Link>
                             </Button>

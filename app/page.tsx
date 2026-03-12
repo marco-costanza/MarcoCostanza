@@ -8,10 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { SocialLinks } from "@/components/social-links";
 import CollaborazioniSection from "@/components/collaborazioni-section";
-import BailoutBlock from "@/components/bailout-block";
-import ArticleCardsHome from "@/components/article-cards-home";
 import { assets } from "@/lib/assets";
 
 export default function HomePage() {
@@ -36,9 +33,10 @@ export default function HomePage() {
             percorsi formativi per muoverti con sicurezza tra finanza
             tradizionale e mondo Bitcoin.
           </p>
+          {/* Step 1: CTA aggiornate verso progetti e contatti */}
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-white/90">
-              <Link href="/servizi">Corsi di formazione</Link>
+              <Link href="/progetti">Scopri i progetti</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-white/90">
               <Link href="https://marcocostanza.it/formazione-1-to-1/" target="_blank" rel="noopener noreferrer">
@@ -48,9 +46,6 @@ export default function HomePage() {
             <Button variant="outline" size="lg" asChild className="border-white text-white hover:bg-white/10">
               <Link href="/contatti">Contattami</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="border-white text-white hover:bg-white/10">
-              <Link href="/chi-sono">Chi sono</Link>
-            </Button>
           </div>
         </div>
       </section>
@@ -58,11 +53,11 @@ export default function HomePage() {
       {/* Collabora con */}
       <CollaborazioniSection />
 
-      {/* Servizi - 3 card */}
+      {/* Step 2: sezione progetti principali */}
       <section className="py-16 bg-background-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-primary text-center mb-12">
-            Servizi e formazione
+            Progetti principali
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             <Card className="overflow-hidden">
@@ -173,67 +168,45 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Bailout Academy - blocco dedicato */}
-      <BailoutBlock />
-
-      {/* News e Articoli */}
-      <ArticleCardsHome />
-
-      {/* 4 card: Merchandise, Affiliazioni, BlockTime, Playlist */}
-      <section className="py-16 border-t border-border bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <Link href="https://marcocostanza.myspreadshop.net" target="_blank" rel="noopener noreferrer" className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative w-full aspect-video bg-muted">
-                <Image src={assets.cards.merchandise} alt="Merchandise" fill className="object-cover group-hover:scale-[1.02] transition-transform" sizes="(max-width: 640px) 100vw, 50vw" />
-              </div>
-              <h2 className="text-lg font-bold text-primary p-4 text-center">Merchandise</h2>
-            </Link>
-            <Link href="https://linktr.ee/marcocostanza" target="_blank" rel="noopener noreferrer" className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative w-full aspect-video bg-muted">
-                <Image src={assets.cards.affiliazioni} alt="Affiliazioni" fill className="object-cover group-hover:scale-[1.02] transition-transform" sizes="(max-width: 640px) 100vw, 50vw" />
-              </div>
-              <h2 className="text-lg font-bold text-primary p-4 text-center">Affiliazioni</h2>
-            </Link>
-            <Link href="https://open.spotify.com/show/0gUVINh9VDMyJcqT3kFiMP" target="_blank" rel="noopener noreferrer" className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative w-full aspect-video bg-muted">
-                <Image src={assets.cards.blocktime} alt="BlockTime" fill className="object-cover group-hover:scale-[1.02] transition-transform" sizes="(max-width: 640px) 100vw, 50vw" />
-              </div>
-              <h2 className="text-lg font-bold text-primary p-4 text-center">BlockTime</h2>
-            </Link>
-            <Link href="https://www.youtube.com/@marcocostanza_/playlists" target="_blank" rel="noopener noreferrer" className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative w-full aspect-video bg-muted">
-                <Image src={assets.cards.playlist} alt="Playlist YouTube" fill className="object-cover group-hover:scale-[1.02] transition-transform" sizes="(max-width: 640px) 100vw, 50vw" />
-              </div>
-              <h2 className="text-lg font-bold text-primary p-4 text-center">Playlist YouTube</h2>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Recensioni / Trustpilot */}
+      {/* Step 3: nuova sezione Trustpilot con link diretto */}
       <section className="py-16 border-t border-border bg-primary">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden">
-            <Image src={assets.trustpilot} alt="Recensioni Trustpilot" width={1024} height={576} className="w-full h-auto object-contain" />
-          </div>
-        </div>
-      </section>
-
-      {/* Restiamo in contatto / CTA finale */}
-      <section className="py-16 border-t border-border bg-background-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">
-            Restiamo in contatto
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-2xl font-bold mb-4">
+            Recensioni su Trustpilot
           </h2>
-          <p className="text-text-muted mb-6 max-w-xl mx-auto">
-            YouTube, Instagram, Telegram, X. Per collaborazioni o domande
-            scrivi a info@marcocostanza.it.
+          <p className="text-white/90 max-w-2xl mx-auto mb-8">
+            Le recensioni verificate su di me e sui miei percorsi sono raccolte
+            su Trustpilot. Leggile per capire l&apos;esperienza di chi ha
+            già lavorato con me e, se ti va, lascia anche la tua.
           </p>
-          <SocialLinks iconSize={24} className="justify-center" />
-          <div className="mt-8">
-            <Button variant="accent" size="lg" asChild>
-              <Link href="/contatti">Contattami</Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button
+              variant="secondary"
+              size="lg"
+              asChild
+              className="bg-white text-primary hover:bg-white/90"
+            >
+              <Link
+                href="https://it.trustpilot.com/review/marcocostanza.it"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Leggi le recensioni
+              </Link>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              asChild
+              className="border-white text-white hover:bg-white/10"
+            >
+              <Link
+                href="https://it.trustpilot.com/evaluate/marcocostanza.it"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lascia una recensione
+              </Link>
             </Button>
           </div>
         </div>

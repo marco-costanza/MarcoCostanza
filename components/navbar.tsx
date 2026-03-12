@@ -10,17 +10,16 @@ import { assets } from "@/lib/assets";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/chi-sono", label: "Chi sono" },
-  { href: "/servizi", label: "Servizi" },
   { href: "/progetti", label: "Progetti" },
   { href: "/blog", label: "Blog" },
   { href: "/affiliazioni", label: "Affiliazioni" },
-  { href: "/eventi", label: "Eventi" },
   { href: "/contatti", label: "Contatti" },
 ];
 
 export default function Navbar() {
+  // Step 1: stato per menu mobile e popup contatti
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [contactsOpen, setContactsOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
@@ -31,10 +30,10 @@ export default function Navbar() {
             <span className="hidden sm:inline">Marco Costanza</span>
           </Link>
 
-          {/* Desktop: link + social */}
+          {/* Desktop: link + contatti con popup */}
           <div className="hidden md:flex items-center gap-8">
             <ul className="flex items-center gap-6">
-              {NAV_LINKS.filter((l) => l.href !== "/").map(({ href, label }) => (
+              {NAV_LINKS.filter((l) => l.href !== "/" && l.href !== "/contatti").map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
@@ -45,10 +44,55 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <SocialLinks iconSize={18} />
-            <Button variant="accent" size="sm" asChild>
-              <Link href="/contatti">Contatti</Link>
-            </Button>
+            <div className="relative">
+              <Button
+                variant="accent"
+                size="sm"
+                type="button"
+                aria-haspopup="dialog"
+                aria-expanded={contactsOpen}
+                onClick={() => setContactsOpen((open) => !open)}
+              >
+                Contatti
+              </Button>
+              {contactsOpen && (
+                <div className="absolute right-0 mt-2 w-72 rounded-lg border border-border bg-background shadow-lg p-4 z-50">
+                  {/* Step 2: link principali di contatto e pagina chi sono */}
+                  <div className="space-y-2 mb-4">
+                    <Link
+                      href="/contatti"
+                      className="block text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      onClick={() => setContactsOpen(false)}
+                    >
+                      Pagina contatti
+                    </Link>
+                    <Link
+                      href="/chi-sono"
+                      className="block text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      onClick={() => setContactsOpen(false)}
+                    >
+                      Chi sono
+                    </Link>
+                    <Link
+                      href="https://it.trustpilot.com/review/marcocostanza.it"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      onClick={() => setContactsOpen(false)}
+                    >
+                      Recensioni Trustpilot
+                    </Link>
+                  </div>
+                  {/* Step 3: elenco social riutilizzando il componente esistente */}
+                  <div className="border-t border-border pt-3">
+                    <p className="text-xs font-semibold text-text-muted mb-2 uppercase tracking-wide">
+                      Social
+                    </p>
+                    <SocialLinks iconSize={18} className="flex-wrap gap-3" />
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile: hamburger */}

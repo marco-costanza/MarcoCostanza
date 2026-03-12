@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { SocialLinks } from "@/components/social-links";
 
 export default function ContattiPage() {
+  // Step 1: stato per il form di contatto con apertura mailto
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [messaggio, setMessaggio] = useState("");
@@ -20,20 +22,36 @@ export default function ContattiPage() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-2xl">
       <h1 className="text-4xl font-bold text-primary mb-4">Contatti</h1>
-      <p className="text-text-muted mb-8">
+      <p className="text-text-muted mb-6">
         Per collaborazioni, consulenze o informazioni scrivimi. Rispondo
         personalmente quando possibile.
       </p>
 
+      {/* Step 2: link diretto alla mail */}
       <a
         href="mailto:info@marcocostanza.it"
-        className="text-accent font-medium hover:underline text-lg block mb-8"
+        className="text-accent font-medium hover:underline text-lg block mb-6"
       >
         info@marcocostanza.it
       </a>
 
-      <SocialLinks iconSize={24} className="mb-10" />
+      {/* Step 3: collegamento alla pagina Chi sono */}
+      <p className="text-sm text-text-muted mb-6">
+        Vuoi sapere chi sono e qual è stato il mio percorso prima di
+        scrivermi? Puoi leggere la{" "}
+        <Link href="/chi-sono" className="text-accent hover:underline">
+          pagina completa &quot;Chi sono&quot;
+        </Link>
+        .
+      </p>
 
+      {/* Step 4: social principali */}
+      <h2 className="text-xl font-semibold text-primary mb-3">
+        Dove puoi trovarmi online
+      </h2>
+      <SocialLinks iconSize={24} className="mb-8" />
+
+      {/* Step 5: form che apre il client email */}
       <h2 className="text-xl font-semibold text-primary mb-4">
         Inviami un messaggio
       </h2>
@@ -43,7 +61,10 @@ export default function ContattiPage() {
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="nome" className="block text-sm font-medium text-text-primary mb-1">
+          <label
+            htmlFor="nome"
+            className="block text-sm font-medium text-text-primary mb-1"
+          >
             Nome
           </label>
           <input
@@ -56,7 +77,10 @@ export default function ContattiPage() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-text-primary mb-1">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-text-primary mb-1"
+          >
             Email
           </label>
           <input
@@ -69,7 +93,10 @@ export default function ContattiPage() {
           />
         </div>
         <div>
-          <label htmlFor="messaggio" className="block text-sm font-medium text-text-primary mb-1">
+          <label
+            htmlFor="messaggio"
+            className="block text-sm font-medium text-text-primary mb-1"
+          >
             Messaggio
           </label>
           <textarea

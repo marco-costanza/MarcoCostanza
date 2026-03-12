@@ -58,8 +58,9 @@ const config: Config = {
         sans: ["var(--font-roboto)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 40px -10px rgba(59, 149, 217, 0.4)",
-        "glow-sm": "0 0 20px -5px rgba(59, 149, 217, 0.3)",
+        brutalist: "4px 4px 0px 0px rgba(9,9,11,1)",
+        "brutalist-hover": "6px 6px 0px 0px rgba(9,9,11,1)",
+        "brutalist-sm": "2px 2px 0px 0px rgba(9,9,11,1)",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -5,36 +5,48 @@
 @layer base {
   :root {
     --font-roboto: "Roboto", sans-serif;
-    /* Shadcn UI - Dark & Neon Finance Theme */
-    --background: 15 23 42; /* slate-900 */
-    --foreground: 248 250 252; /* slate-50 */
+    /* Shadcn UI - Dynamic & Bold Theme */
+    --background: 255 255 255; /* white */
+    --foreground: 9 9 11; /* zinc-950 */
     
-    --card: 30 41 59; /* slate-800 */
-    --card-foreground: 248 250 252;
+    --card: 255 255 255; /* white */
+    --card-foreground: 9 9 11;
     
-    --popover: 15 23 42;
-    --popover-foreground: 248 250 252;
+    --popover: 255 255 255;
+    --popover-foreground: 9 9 11;
     
-    --primary: 59 149 217; /* Biolume Blue base */
+    --primary: 37 99 235; /* vibrant blue-600 */
     --primary-foreground: 255 255 255;
     
-    --secondary: 51 65 85; /* slate-700 */
-    --secondary-foreground: 248 250 252;
+    --secondary: 244 244 245; /* zinc-100 */
+    --secondary-foreground: 9 9 11;
     
-    --muted: 30 41 59;
-    --muted-foreground: 148 163 184; /* slate-400 */
+    --muted: 244 244 245;
+    --muted-foreground: 113 113 122; /* zinc-500 */
     
     --accent: 70 111 157; /* Whale Street Blue */
     --accent-foreground: 255 255 255;
     
     --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
+    --destructive-foreground: 255 255 255;
     
-    --border: 51 65 85; /* slate-700 */
-    --input: 51 65 85;
-    --ring: 59 149 217; /* primary base */
+    --border: 228 228 231; /* zinc-200 */
+    --input: 228 228 231;
+    --ring: 37 99 235; /* primary */
     
-    --radius: 1rem;
+    --radius: 0.75rem;
+  }
+
+  .dark-section {
+    --background: 9 9 11; /* zinc-950 */
+    --foreground: 255 255 255;
+    --card: 24 24 27; /* zinc-900 */
+    --card-foreground: 255 255 255;
+    --muted: 39 39 42; /* zinc-800 */
+    --muted-foreground: 161 161 170; /* zinc-400 */
+    --border: 39 39 42; /* zinc-800 */
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
   }
 
   * {
@@ -42,15 +54,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased min-h-screen selection:bg-primary/30 selection:text-white;
-    background-image: 
-      radial-gradient(circle at 15% 50%, rgba(59, 149, 217, 0.08), transparent 25%),
-      radial-gradient(circle at 85% 30%, rgba(70, 111, 157, 0.08), transparent 25%);
-    background-attachment: fixed;
+    @apply bg-background text-foreground font-sans antialiased min-h-screen selection:bg-primary selection:text-white;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-bold tracking-tight;
+    @apply font-sans font-black tracking-tight;
   }
 }
 
@@ -59,24 +67,15 @@
     text-wrap: balance;
   }
   
-  .glass-panel {
-    @apply bg-card/40 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  .brutalist-border {
+    @apply border-2 border-foreground;
   }
 
-  .glow-effect {
-    @apply transition-all duration-500 hover:-translate-y-1 relative;
+  .brutalist-shadow {
+    @apply shadow-[4px_4px_0px_0px_rgba(9,9,11,1)] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_rgba(9,9,11,1)];
   }
-  
-  .glow-effect::before {
-    content: "";
-    @apply absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-xl blur opacity-0 transition duration-500 -z-10 group-hover:opacity-30;
-  }
-  
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70;
-  }
-  
-  .text-gradient-primary {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#60A5FA] to-accent;
+
+  .text-gradient-bold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600;
   }
 }

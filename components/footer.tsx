@@ -3,50 +3,49 @@ import { SocialLinks } from "./social-links";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-background relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+    <footer className="dark-section border-t-4 border-foreground relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">
           <Link
             href="/"
-            className="text-2xl font-bold text-gradient hover:opacity-80 transition-opacity"
+            className="text-3xl font-black text-white uppercase tracking-tight hover:-translate-y-1 transition-transform"
           >
             Marco Costanza
           </Link>
 
           <div className="max-w-3xl space-y-3">
-            <p className="text-sm text-muted-foreground/80">
+            <p className="text-sm text-zinc-400 font-bold uppercase tracking-wider">
               Marco Costanza — Torino — P.IVA: 12044330012 —{" "}
               <a
                 href="mailto:info@marcocostanza.it"
-                className="text-primary hover:underline hover:text-accent transition-colors"
+                className="text-white hover:underline decoration-2 hover:text-primary transition-colors"
               >
                 info@marcocostanza.it
               </a>
             </p>
           </div>
 
-          <SocialLinks iconSize={24} />
+          <div className="p-4 bg-white/5 brutalist-border brutalist-shadow rounded-xl">
+            <SocialLinks iconSize={24} />
+          </div>
 
-          <div className="flex items-center gap-6 text-sm pt-6 border-t border-white/5 w-full max-w-md justify-center mt-6">
+          <div className="flex items-center gap-6 text-sm font-bold pt-8 border-t-2 border-zinc-800 w-full max-w-md justify-center mt-6">
             <Link
               href="/privacy"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-zinc-400 hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>
-            <span className="text-muted-foreground/30">|</span>
+            <span className="text-zinc-700">|</span>
             <Link
               href="/cookie"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-zinc-400 hover:text-white transition-colors"
             >
               Cookie Policy
             </Link>
           </div>
 
-          <p className="text-xs text-muted-foreground/60 mt-8">
+          <p className="text-xs text-zinc-500 font-bold uppercase tracking-wider mt-8">
             &copy; {new Date().getFullYear()} Marco Costanza. Tutti i diritti
             riservati.
           </p>

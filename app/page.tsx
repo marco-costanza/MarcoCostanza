@@ -197,7 +197,7 @@ export default function HomePage() {
                 variant="outline"
                 size="lg"
                 asChild
-                className="border-white/50 text-white hover:bg-white/10 hover:shadow-glow-sm font-semibold"
+                className="border-white/50 text-white shadow-glow-sm hover:bg-white/10 hover:shadow-glow font-semibold"
               >
                 <Link
                   href="https://it.trustpilot.com/evaluate/marcocostanza.it"

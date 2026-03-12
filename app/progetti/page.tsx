@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Progetti – Marco Costanza",
   description:
-    "WhaleStreet, Bailout, BlockTime e altri progetti di Marco Costanza.",
+    "WhaleStreet, Bailout e altri progetti di formazione e divulgazione su Bitcoin.",
 };
 
 const PROGETTI = [
@@ -30,13 +30,6 @@ const PROGETTI = [
       "Masterclass Bitcoin in live: dall'acquisto alla custodia fino alla spesa. Percorso in 2 settimane con numero limitato di studenti. Realtà Bitcoin-only con network di professionisti.",
     href: "https://bailout.website",
     label: "Vai a Bailout",
-  },
-  {
-    name: "BlockTime",
-    description:
-      "Progetto di divulgazione e contenuti sul mondo Bitcoin e blockchain. Approfondimenti, interviste e risorse per restare aggiornati.",
-    href: "/contatti",
-    label: "Scopri BlockTime",
   },
 ];
 

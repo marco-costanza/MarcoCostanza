@@ -9,7 +9,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { SocialLinks } from "@/components/social-links";
-import CollaborazioniSection from "@/components/collaborazioni-section";
 import { assets } from "@/lib/assets";
 
 export default function HomePage() {
@@ -39,10 +38,6 @@ export default function HomePage() {
                 distribuite sui principali social network e considerarmi uno tra
                 i maggiori esperti e divulgatori italiani di questa tecnologia.
               </p>
-              <SocialLinks
-                iconSize={22}
-                className="justify-center lg:justify-start flex-wrap gap-4"
-              />
             </div>
             <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-muted shrink-0">
               <iframe
@@ -56,9 +51,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Collabora con */}
-      <CollaborazioniSection />
 
       {/* Step 2: sezione formazione (ex progetti principali) */}
       <section className="py-16 bg-background-muted">

@@ -22,34 +22,11 @@ export default function ContattiPage() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-2xl">
       <h1 className="text-4xl font-bold text-primary mb-4">Contatti</h1>
-      <p className="text-text-muted mb-6">
-        Per collaborazioni, consulenze o informazioni scrivimi. Rispondo
-        personalmente quando possibile.
-      </p>
-
-      {/* Step 2: link diretto alla mail */}
-      <a
-        href="mailto:info@marcocostanza.it"
-        className="text-accent font-medium hover:underline text-lg block mb-6"
-      >
-        info@marcocostanza.it
-      </a>
-
-      {/* Step 3: collegamento alla pagina Chi sono */}
-      <p className="text-sm text-text-muted mb-6">
-        Vuoi sapere chi sono e qual è stato il mio percorso prima di
-        scrivermi? Puoi leggere la{" "}
-        <Link href="/chi-sono" className="text-accent hover:underline">
-          pagina completa &quot;Chi sono&quot;
-        </Link>
-        .
-      </p>
-
-      {/* Step 4: social principali */}
+      {/* Social principali */}
       <h2 className="text-xl font-semibold text-primary mb-3">
         Dove puoi trovarmi online
       </h2>
-      <SocialLinks iconSize={24} className="mb-8" />
+      <SocialLinks iconSize={24} showLabels className="mb-8" />
 
       {/* Step 5: form che apre il client email */}
       <h2 className="text-xl font-semibold text-primary mb-4">
@@ -112,7 +89,7 @@ export default function ContattiPage() {
           type="submit"
           className="rounded-md bg-accent px-4 py-2 text-white font-medium hover:bg-accent/90 transition-colors"
         >
-          Apri email con messaggio
+          Invia messaggio
         </button>
       </form>
     </div>

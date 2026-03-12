@@ -70,7 +70,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-card shrink-0">
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-card shadow-glow-sm shrink-0">
               <span className="absolute left-3 top-3 z-10 rounded-full bg-accent px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
                 Intervento Ufficiale
               </span>
@@ -170,7 +170,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay pointer-events-none" aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-card via-cypherpunk to-accent/20 text-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-card border border-white/15">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-card via-cypherpunk to-accent/20 text-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-card shadow-glow-accent-sm border border-white/15">
             <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden mb-8 border border-white/10">
               <Image
                 src={assets.trustpilotHero}

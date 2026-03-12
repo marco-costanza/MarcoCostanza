@@ -24,7 +24,6 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="section-surface grid gap-12 lg:grid-cols-2 lg:gap-20 items-center max-w-6xl mx-auto p-7 sm:p-10">
             <div className="text-center lg:text-left">
-              <span className="accent-chip mb-4">Bitcoin &amp; Finanza</span>
               <h1 id="hero-heading" className="hero-heading text-foreground mb-6">
                 Chi è Marco Costanza
               </h1>
@@ -71,7 +70,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-glow-sm shrink-0">
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-card shrink-0">
               <span className="absolute left-3 top-3 z-10 rounded-full bg-accent px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
                 Intervento Ufficiale
               </span>
@@ -92,7 +91,6 @@ export default function HomePage() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-            <span className="accent-chip mb-4">Percorsi Premium</span>
             <h2 id="formazione-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
               Formazione
             </h2>
@@ -170,12 +168,18 @@ export default function HomePage() {
 
       <section className="relative py-16 lg:py-24 dark-section border-b border-primary/25 overflow-hidden" aria-labelledby="trustpilot-heading">
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay pointer-events-none" aria-hidden />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none opacity-[0.03] select-none">
-          <span className="text-[10rem] sm:text-[15rem] font-bold leading-none whitespace-nowrap">TRUSTPILOT</span>
-        </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-card via-cypherpunk to-accent/20 text-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow-accent border border-white/15">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-card via-cypherpunk to-accent/20 text-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-card border border-white/15">
+            <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden mb-8 border border-white/10">
+              <Image
+                src={assets.trustpilotHero}
+                alt="Recensioni e valutazione Trustpilot - Marco Costanza"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 672px"
+              />
+            </div>
             <h2 id="trustpilot-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight">
               Recensioni Verificate
             </h2>
@@ -183,12 +187,7 @@ export default function HomePage() {
               Scopri l&apos;esperienza di chi ha già lavorato con me e, se ti va, lascia anche la tua opinione.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6">
-              <Button
-                variant="secondary"
-                size="lg"
-                asChild
-                className="bg-card text-card-foreground hover:bg-card/90 font-semibold"
-              >
+              <Button variant="accent" size="lg" asChild>
                 <Link
                   href="https://it.trustpilot.com/review/marcocostanza.it"
                   target="_blank"

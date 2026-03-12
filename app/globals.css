@@ -84,7 +84,7 @@
     @apply transition-shadow duration-300;
   }
   .glow-effect:hover {
-    @apply shadow-glow;
+    @apply shadow-card-hover;
   }
 
   .card-border {
@@ -94,7 +94,7 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   .card-hover:hover {
-    @apply border-primary/30 shadow-glow-sm;
+    @apply border-primary/30 shadow-card-hover;
   }
 
   .page-shell {

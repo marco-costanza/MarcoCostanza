@@ -41,6 +41,8 @@ export const assets = {
     playlist: `${IMG}/2025/06/Palylist-1024x576.png`,
   },
   trustpilot: `${IMG}/2025/06/Trustpilot-1024x576.png`,
+  /** Hero recensioni: sostituire con immagine WOW (rating + recensioni) generata da Gemini se necessario */
+  trustpilotHero: `${IMG}/2025/06/Trustpilot-1024x576.png`,
   recensioni: [
     `${IMG}/2024/03/image-5.png`,
     `${IMG}/2024/03/image-4.png`,

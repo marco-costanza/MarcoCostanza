@@ -28,12 +28,11 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-3 text-lg font-semibold text-foreground transition-opacity hover:opacity-90"
           >
-            <div className="rounded-lg overflow-hidden shrink-0 border border-border">
+            <div className="rounded-lg overflow-hidden shrink-0">
               <Image src={assets.logo.favicon} alt="Marco Costanza" width={40} height={40} />
             </div>
             <div className="hidden sm:flex sm:flex-col">
               <span className="tracking-tight brand-gradient-text">Marco Costanza</span>
-              <span className="text-[10px] uppercase tracking-widest text-primary/70">Bitcoin &amp; Mercati</span>
             </div>
           </Link>
 

@@ -20,8 +20,8 @@ export default function ContattiPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16 max-w-2xl">
-      <h1 className="text-4xl font-bold text-primary mb-4">Contatti</h1>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-2xl">
+      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Contatti</h1>
       {/* Social principali */}
       <h2 className="text-xl font-semibold text-primary mb-3">
         Dove puoi trovarmi online
@@ -32,7 +32,7 @@ export default function ContattiPage() {
       <h2 className="text-xl font-semibold text-primary mb-4">
         Inviami un messaggio
       </h2>
-      <p className="text-sm text-text-muted mb-4">
+      <p className="text-sm text-muted-foreground mb-4">
         Compila il form: si aprirà il tuo client email con i campi già
         compilati. In futuro potrà essere attivato un invio diretto dal sito.
       </p>
@@ -40,7 +40,7 @@ export default function ContattiPage() {
         <div>
           <label
             htmlFor="nome"
-            className="block text-sm font-medium text-text-primary mb-1"
+            className="block text-sm font-medium text-foreground mb-1"
           >
             Nome
           </label>
@@ -49,14 +49,14 @@ export default function ContattiPage() {
             type="text"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
-            className="w-full rounded-md border border-border bg-background px-3 py-2 text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             required
           />
         </div>
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-text-primary mb-1"
+            className="block text-sm font-medium text-foreground mb-1"
           >
             Email
           </label>
@@ -65,14 +65,14 @@ export default function ContattiPage() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-md border border-border bg-background px-3 py-2 text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             required
           />
         </div>
         <div>
           <label
             htmlFor="messaggio"
-            className="block text-sm font-medium text-text-primary mb-1"
+            className="block text-sm font-medium text-foreground mb-1"
           >
             Messaggio
           </label>
@@ -81,13 +81,13 @@ export default function ContattiPage() {
             value={messaggio}
             onChange={(e) => setMessaggio(e.target.value)}
             rows={5}
-            className="w-full rounded-md border border-border bg-background px-3 py-2 text-text-primary focus:outline-none focus:ring-2 focus:ring-accent resize-y"
+            className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-y"
             required
           />
         </div>
         <button
           type="submit"
-          className="rounded-md bg-accent px-4 py-2 text-white font-medium hover:bg-accent/90 transition-colors"
+          className="rounded-md bg-accent px-6 py-3 text-white font-medium hover:bg-accent/90 transition-colors min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           Invia messaggio
         </button>

@@ -9,32 +9,32 @@ export const metadata: Metadata = {
 
 export default function ServiziPage() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-2xl">
-      <h1 className="text-4xl font-bold text-primary mb-4">Pagina non attiva</h1>
-      <p className="text-xl text-text-muted mb-6">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-2xl">
+      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Pagina non attiva</h1>
+      <p className="text-lg text-muted-foreground mb-6">
         La sezione Servizi è stata riorganizzata. Ora tutti i percorsi di
         formazione e i progetti principali sono raccolti nella pagina Progetti.
       </p>
-      <p className="text-text-muted mb-4">
+      <p className="text-muted-foreground mb-4">
         Puoi continuare da qui:
       </p>
-      <ul className="list-disc list-inside text-text-muted space-y-2 mb-8">
+      <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-8">
         <li>
           Vai alla pagina{" "}
-          <Link href="/progetti" className="text-accent hover:underline">
+          <Link href="/progetti" className="text-primary hover:underline font-medium">
             Progetti
           </Link>{" "}
           per una panoramica completa.
         </li>
         <li>
           Se vuoi scrivermi direttamente, usa la pagina{" "}
-          <Link href="/contatti" className="text-accent hover:underline">
+          <Link href="/contatti" className="text-primary hover:underline font-medium">
             Contatti
           </Link>
           .
         </li>
       </ul>
-      <p className="text-sm text-text-muted">
+      <p className="text-sm text-muted-foreground">
         Se sei arrivato qui da un vecchio link, puoi aggiornare il tuo
         segnalibro alla nuova struttura del sito.
       </p>

@@ -31,13 +31,13 @@ export function FaqAccordion({ className = "" }: { className?: string }) {
         {FAQ.map(({ q, a }) => (
           <li key={q}>
             <details className="group rounded-lg border border-border bg-background px-4">
-              <summary className="py-3 cursor-pointer list-none flex items-center justify-between gap-2 font-medium text-text-primary hover:text-accent transition-colors">
+              <summary className="py-3 cursor-pointer list-none flex items-center justify-between gap-2 font-medium text-foreground hover:text-accent transition-colors">
                 <span>{q}</span>
                 <span className="text-accent group-open:rotate-180 transition-transform">
                   ▼
                 </span>
               </summary>
-              <p className="pb-3 pt-0 text-sm text-text-muted leading-relaxed">
+              <p className="pb-3 pt-0 text-sm text-muted-foreground leading-relaxed">
                 {a}
               </p>
             </details>

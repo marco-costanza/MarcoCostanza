@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -35,19 +34,19 @@ const PROGETTI = [
 
 export default function ProgettiPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-primary mb-4">Progetti</h1>
-      <p className="text-xl text-text-muted max-w-2xl mb-12">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Progetti</h1>
+      <p className="text-lg text-muted-foreground max-w-2xl mb-10 sm:mb-12">
         I principali progetti di formazione e divulgazione su Bitcoin e mercati
         finanziari.
       </p>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
         {PROGETTI.map((p) => (
           <Card key={p.name}>
             <CardHeader>
               <CardTitle>{p.name}</CardTitle>
-              <CardDescription className="text-base">
+              <CardDescription className="text-base leading-relaxed">
                 {p.description}
               </CardDescription>
             </CardHeader>
@@ -55,8 +54,8 @@ export default function ProgettiPage() {
               <Button variant="outline" asChild>
                 <Link
                   href={p.href}
-                  target={p.href.startsWith("http") ? "_blank" : undefined}
-                  rel={p.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {p.label}
                 </Link>

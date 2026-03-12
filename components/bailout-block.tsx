@@ -5,7 +5,7 @@ import { assets } from "@/lib/assets";
 
 export default function BailoutBlock() {
   return (
-    <section className="py-16 border-t border-border bg-background-muted">
+    <section className="py-16 border-t border-border bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
           <div className="relative w-full md:w-1/2 aspect-video rounded-lg overflow-hidden bg-muted shrink-0">
@@ -15,13 +15,13 @@ export default function BailoutBlock() {
           <h2 className="text-2xl font-bold text-primary mb-4">
             Bailout Academy
           </h2>
-          <p className="text-text-muted leading-relaxed mb-4">
+          <p className="text-muted-foreground leading-relaxed mb-4">
             La masterclass Bitcoin è un percorso in live, accessibile ad un
             numero limitato di studenti, che si svolge nell&apos;arco di 2
             settimane. Dall&apos;acquisto, alla custodia fino alla spesa, il
             tutto condito con pratiche di privacy, sicurezza ed anonimato.
           </p>
-          <p className="text-text-muted leading-relaxed mb-6">
+          <p className="text-muted-foreground leading-relaxed mb-6">
             Alla fine di questo percorso, durante il quale hai anche la
             possibilità di fare tutte le domande che vuoi, sarai autonomo al 100%.
           </p>

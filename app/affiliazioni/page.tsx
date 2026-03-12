@@ -183,9 +183,9 @@ const AFFILIATIONS: AffiliateGroup[] = [
 
 export default function AffiliazioniPage() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold text-primary mb-4">Affiliazioni</h1>
-      <p className="text-xl text-text-muted max-w-2xl mb-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-4xl">
+      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Affiliazioni</h1>
+      <p className="text-xl text-muted-foreground max-w-2xl mb-8">
         Qui trovi tutti i link affiliati e i codici sconto che utilizzo o
         consiglio. Usando questi link supporti il mio lavoro senza costi
         aggiuntivi per te.
@@ -206,10 +206,10 @@ export default function AffiliazioniPage() {
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                     <div>
-                      <h3 className="text-base font-semibold text-text-primary">
+                      <h3 className="text-base font-semibold text-foreground">
                         {item.name}
                       </h3>
-                      <p className="text-sm text-text-muted mt-1">
+                      <p className="text-sm text-muted-foreground mt-1">
                         {item.description}
                       </p>
                     </div>
@@ -217,7 +217,7 @@ export default function AffiliazioniPage() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent/90 transition-colors"
+                      className="inline-flex items-center justify-center rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent/90 transition-colors min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     >
                       Vai al sito
                     </Link>
@@ -230,7 +230,7 @@ export default function AffiliazioniPage() {
       </div>
 
       {/* Step 3: breve nota di trasparenza */}
-      <p className="mt-10 text-xs text-text-muted max-w-2xl">
+      <p className="mt-10 text-xs text-muted-foreground max-w-2xl">
         Alcuni dei link presenti in questa pagina sono link affiliati: posso
         ricevere una commissione o un vantaggio economico se decidi di
         utilizzarli. Ti invito comunque a valutare sempre in autonomia se il

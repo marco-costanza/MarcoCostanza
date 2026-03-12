@@ -17,29 +17,30 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
-  // Step 1: stato per menu mobile e popup contatti
   const [mobileOpen, setMobileOpen] = useState(false);
   const [contactsOpen, setContactsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b-4 border-foreground bg-white">
+    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-xl font-black hover:-translate-y-0.5 transition-transform">
-            <div className="brutalist-border rounded-lg overflow-hidden shrink-0">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-lg font-semibold text-foreground transition-opacity hover:opacity-90"
+          >
+            <div className="rounded-lg overflow-hidden shrink-0 border border-border">
               <Image src={assets.logo.favicon} alt="Marco Costanza" width={40} height={40} />
             </div>
-            <span className="hidden sm:inline text-foreground tracking-tight uppercase">Marco Costanza</span>
+            <span className="hidden sm:inline tracking-tight">Marco Costanza</span>
           </Link>
 
-          {/* Desktop: link + contatti con popup */}
           <div className="hidden md:flex items-center gap-8">
             <ul className="flex items-center gap-6">
               {NAV_LINKS.filter((l) => l.href !== "/" && l.href !== "/contatti").map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm font-bold text-zinc-600 hover:text-primary transition-colors hover:underline decoration-2"
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
                   >
                     {label}
                   </Link>
@@ -48,7 +49,7 @@ export default function Navbar() {
             </ul>
             <div className="relative">
               <Button
-                variant="accent"
+                variant="default"
                 size="sm"
                 type="button"
                 aria-haspopup="dialog"
@@ -58,12 +59,11 @@ export default function Navbar() {
                 Contatti
               </Button>
               {contactsOpen && (
-                <div className="absolute right-0 mt-3 w-72 bg-white brutalist-border brutalist-shadow rounded-xl p-5 z-50 animate-in fade-in slide-in-from-top-2">
-                  {/* Step 2: link principali di contatto e pagina chi sono */}
+                <div className="absolute right-0 mt-3 w-72 rounded-lg border border-border bg-popover p-5 shadow-lg z-50 animate-in fade-in slide-in-from-top-2">
                   <div className="space-y-3 mb-5">
                     <Link
                       href="/contatti"
-                      className="flex items-center gap-3 text-sm font-bold text-foreground hover:bg-zinc-100 transition-colors p-2 rounded-lg"
+                      className="flex items-center gap-3 text-sm font-medium text-foreground hover:bg-muted transition-colors p-2 rounded-md"
                       onClick={() => setContactsOpen(false)}
                     >
                       <Mail size={14} aria-hidden />
@@ -71,7 +71,7 @@ export default function Navbar() {
                     </Link>
                     <Link
                       href="/chi-sono"
-                      className="flex items-center gap-2 text-sm font-medium text-text-primary hover:text-accent transition-colors"
+                      className="flex items-center gap-2 text-sm font-medium text-foreground hover:bg-muted transition-colors p-2 rounded-md"
                       onClick={() => setContactsOpen(false)}
                     >
                       <User size={18} strokeWidth={2.5} aria-hidden />
@@ -81,16 +81,15 @@ export default function Navbar() {
                       href="https://it.trustpilot.com/review/marcocostanza.it"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-sm font-bold text-foreground hover:bg-zinc-100 transition-colors p-2 rounded-lg"
+                      className="flex items-center gap-3 text-sm font-medium text-foreground hover:bg-muted transition-colors p-2 rounded-md"
                       onClick={() => setContactsOpen(false)}
                     >
                       <Star size={18} strokeWidth={2.5} aria-hidden />
                       <span>Recensioni Trustpilot</span>
                     </Link>
                   </div>
-                  {/* Step 3: elenco social riutilizzando il componente esistente */}
-                  <div className="border-t-2 border-foreground pt-4">
-                    <p className="text-[10px] font-black text-zinc-500 mb-3 uppercase tracking-widest text-center">
+                  <div className="border-t border-border pt-4">
+                    <p className="text-xs font-semibold text-muted-foreground mb-3 uppercase tracking-wider text-center">
                       Social
                     </p>
                     <SocialLinks
@@ -105,27 +104,25 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile: hamburger */}
           <button
             type="button"
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
-            aria-label="Menu"
+            aria-label="Apri menu"
           >
-            {mobileOpen ? <X size={28} strokeWidth={2.5} /> : <Menu size={28} strokeWidth={2.5} />}
+            {mobileOpen ? <X size={24} strokeWidth={2} /> : <Menu size={24} strokeWidth={2} />}
           </button>
         </div>
 
-        {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden border-t-2 border-foreground py-6 space-y-6 animate-in slide-in-from-top-4 bg-white">
-            <ul className="flex flex-col gap-2">
+          <div className="md:hidden border-t border-border py-6 space-y-6 animate-in slide-in-from-top-2">
+            <ul className="flex flex-col gap-1">
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="block py-3 px-4 text-foreground font-bold text-lg hover:bg-zinc-100 rounded-lg transition-colors uppercase tracking-tight"
+                    className="block py-3 px-4 text-foreground font-medium rounded-md hover:bg-muted transition-colors"
                     onClick={() => setMobileOpen(false)}
                   >
                     {label}
@@ -134,7 +131,7 @@ export default function Navbar() {
               ))}
             </ul>
             <SocialLinks iconSize={22} />
-            <Button variant="accent" size="sm" asChild className="w-full">
+            <Button variant="default" size="sm" asChild className="w-full">
               <Link href="/contatti" onClick={() => setMobileOpen(false)}>
                 Contatti
               </Link>

@@ -8,8 +8,12 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1400px",
       },
     },
@@ -48,21 +52,21 @@ const config: Config = {
           DEFAULT: "rgba(var(--card), <alpha-value>)",
           foreground: "rgba(var(--card-foreground), <alpha-value>)",
         },
-        // Manteniamo questi colori per back-compatibility, anche se shadcn userà le vars
         text: {
           primary: "rgba(var(--foreground), <alpha-value>)",
           muted: "rgba(var(--muted-foreground), <alpha-value>)",
         },
       },
       fontFamily: {
-        sans: ["var(--font-roboto)", "system-ui", "sans-serif"],
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        brutalist: "4px 4px 0px 0px rgba(9,9,11,1)",
-        "brutalist-hover": "6px 6px 0px 0px rgba(9,9,11,1)",
-        "brutalist-sm": "2px 2px 0px 0px rgba(9,9,11,1)",
+        glow: "0 0 40px -10px rgba(37, 99, 235, 0.25)",
+        "glow-sm": "0 0 20px -5px rgba(37, 99, 235, 0.2)",
       },
       borderRadius: {
+        DEFAULT: "8px",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",

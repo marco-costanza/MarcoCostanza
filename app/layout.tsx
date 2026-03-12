@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  variable: "--font-roboto",
+const montserrat = Montserrat({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -41,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className={roboto.variable}>
+    <html lang="it" className={`${montserrat.variable} ${inter.variable}`}>
       <body>
         <Navbar />
         <main>{children}</main>

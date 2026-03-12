@@ -48,7 +48,7 @@ export function SocialLinks({
             href={href}
             target={href.startsWith("mailto:") ? undefined : "_blank"}
             rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-            className="flex items-center gap-2 text-text-muted hover:text-accent transition-colors"
+            className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
             aria-label={label}
           >
             <Icon size={iconSize} aria-hidden />

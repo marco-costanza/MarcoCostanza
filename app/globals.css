@@ -5,8 +5,8 @@
 @layer base {
   :root {
     /* Fonts iniettati da layout (Montserrat + Inter) */
-    /* Palette: bianco, nero #212121, blu WhaleStreet */
-    --background: 255 255 255; /* #FFFFFF */
+    /* Palette: grigio‑blu chiaro, nero #212121, blu WhaleStreet */
+    --background: 244 248 251; /* #F4F8FB, come WhaleStreet */
     --foreground: 33 33 33; /* #212121 */
     --card: 255 255 255; /* #FFFFFF */
     --card-foreground: 33 33 33; /* #212121 */

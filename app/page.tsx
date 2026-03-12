@@ -13,9 +13,12 @@ import { assets } from "@/lib/assets";
 export default function HomePage() {
   return (
     <>
-      <section className="relative py-16 lg:py-24 border-b border-border bg-background overflow-hidden" aria-labelledby="hero-heading">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl opacity-60" aria-hidden />
-        <div className="absolute top-0 right-32 w-64 h-64 bg-accent/10 rounded-full filter blur-3xl opacity-60" aria-hidden />
+      <section
+        className="relative py-16 lg:py-24 border-b border-border bg-gradient-to-br from-background via-white to-primary/5 overflow-hidden"
+        aria-labelledby="hero-heading"
+      >
+        <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/15 rounded-full filter blur-3xl opacity-70" aria-hidden />
+        <div className="absolute top-10 right-40 w-72 h-72 bg-accent/15 rounded-full filter blur-3xl opacity-60" aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center max-w-6xl mx-auto">

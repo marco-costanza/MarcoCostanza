@@ -34,7 +34,7 @@ const PROGETTI = [
 
 export default function ProgettiPage() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 page-shell section-surface p-6 sm:p-8">
       <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Progetti</h1>
       <p className="text-lg text-muted-foreground max-w-2xl mb-10 sm:mb-12">
         I principali progetti di formazione e divulgazione su Bitcoin e mercati

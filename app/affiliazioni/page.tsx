@@ -183,7 +183,7 @@ const AFFILIATIONS: AffiliateGroup[] = [
 
 export default function AffiliazioniPage() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-4xl">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-4xl page-shell section-surface p-6 sm:p-8">
       <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Affiliazioni</h1>
       <p className="text-xl text-muted-foreground max-w-2xl mb-8">
         Qui trovi tutti i link affiliati e i codici sconto che utilizzo o

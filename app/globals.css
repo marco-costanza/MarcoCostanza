@@ -90,6 +90,28 @@
     @apply border-primary/30 shadow-glow-sm;
   }
 
+  .page-shell {
+    @apply relative;
+    background:
+      radial-gradient(900px 380px at 100% -10%, rgba(59, 149, 217, 0.14), transparent 58%),
+      radial-gradient(850px 360px at 0% 0%, rgba(255, 97, 2, 0.08), transparent 54%);
+  }
+
+  .section-surface {
+    @apply rounded-2xl border border-border bg-card/85 backdrop-blur-sm shadow-sm;
+  }
+
+  .brand-gradient-text {
+    background: linear-gradient(92deg, rgb(var(--blue-midnight)) 0%, rgb(var(--blue-whalestreet)) 45%, rgb(var(--orange-6102)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .accent-chip {
+    @apply inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;

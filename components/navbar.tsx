@@ -21,17 +21,17 @@ export default function Navbar() {
   const [contactsOpen, setContactsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
+    <nav className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/85 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-lg font-semibold text-foreground transition-opacity hover:opacity-90"
+            className="flex items-center gap-3 text-lg font-semibold text-foreground transition-opacity hover:opacity-90"
           >
             <div className="rounded-lg overflow-hidden shrink-0 border border-border">
               <Image src={assets.logo.favicon} alt="Marco Costanza" width={40} height={40} />
             </div>
-            <span className="hidden sm:inline tracking-tight">Marco Costanza</span>
+            <span className="hidden sm:inline tracking-tight brand-gradient-text">Marco Costanza</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -40,7 +40,7 @@ export default function Navbar() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
+                    className="text-sm font-semibold uppercase tracking-wide text-muted-foreground transition-colors hover:text-accent"
                   >
                     {label}
                   </Link>

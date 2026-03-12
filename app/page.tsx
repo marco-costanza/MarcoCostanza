@@ -12,17 +12,18 @@ import { assets } from "@/lib/assets";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="page-shell">
       <section
-        className="relative py-16 lg:py-24 border-b border-border bg-gradient-to-br from-background via-background to-primary/10 overflow-hidden"
+        className="relative py-16 lg:py-24 border-b border-border bg-gradient-to-br from-background via-card/70 to-primary/10 overflow-hidden"
         aria-labelledby="hero-heading"
       >
-        <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/15 rounded-full filter blur-3xl opacity-70" aria-hidden />
-        <div className="absolute top-10 right-40 w-72 h-72 bg-accent/15 rounded-full filter blur-3xl opacity-60" aria-hidden />
+        <div className="absolute -top-16 -right-12 w-80 h-80 bg-primary/20 rounded-full filter blur-3xl opacity-70" aria-hidden />
+        <div className="absolute top-8 right-44 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl opacity-55" aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center max-w-6xl mx-auto">
+          <div className="section-surface grid gap-12 lg:grid-cols-2 lg:gap-20 items-center max-w-6xl mx-auto p-7 sm:p-10">
             <div className="text-center lg:text-left">
+              <span className="accent-chip mb-4">Bitcoin &amp; Finanza</span>
               <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
                 Chi è Marco Costanza
               </h1>
@@ -42,7 +43,7 @@ export default function HomePage() {
                 distribuite sui principali social network e considerarmi uno tra
                 i maggiori esperti e divulgatori italiani di questa tecnologia.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 sm:items-center">
                 <Button variant="accent" size="lg" asChild>
                   <Link href="/progetti">
                     Scopri i progetti
@@ -55,7 +56,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border bg-muted shadow-sm shrink-0">
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-glow-sm shrink-0">
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube.com/embed/dxQcBs2blwk?rel=0"
@@ -68,7 +69,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative py-16 lg:py-24 bg-muted/30 border-b border-border" aria-labelledby="formazione-heading">
+      <section className="relative py-16 lg:py-24 bg-muted/40 border-b border-border" aria-labelledby="formazione-heading">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(rgb(21, 44, 66) 2px, transparent 2px)", backgroundSize: "32px 32px" }} aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -155,7 +156,7 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow-accent">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary via-primary/80 to-accent text-primary-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-glow-accent">
             <h2 id="trustpilot-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight">
               Recensioni Verificate
             </h2>
@@ -195,6 +196,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

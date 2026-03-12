@@ -38,10 +38,10 @@ export function SocialLinks({
   const baseUlClasses =
     layout === "stacked"
       ? "flex flex-col gap-2"
-      : "flex items-center gap-4";
+      : "flex flex-wrap items-center gap-3 sm:gap-4";
 
   return (
-    <ul className={`${baseUlClasses} ${className}`} aria-label="Social e contatti">
+    <ul className={`${baseUlClasses} max-w-full ${className}`} aria-label="Social e contatti">
       {LINKS.map(({ href, label, Icon }) => (
         <li key={label}>
           <Link

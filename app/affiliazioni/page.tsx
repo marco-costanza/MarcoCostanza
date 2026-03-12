@@ -36,15 +36,6 @@ type AffiliateGroup = {
   items: Affiliate[];
 };
 
-const IMG = "/images";
-const LOGO_BY_NAME: Record<string, string> = {
-  Relai: `${IMG}/2025/06/Relai-partner-150x150.png`,
-  BitBox02: `${IMG}/2025/06/BitBox-partner-150x150.png`,
-  Binance: `${IMG}/2025/06/Binance-partner-150x150.png`,
-  XTB: `${IMG}/2025/06/XTB-partner-150x150.png`,
-  "BitCare Forum": `${IMG}/2025/06/Bitcare-Forum-partner-150x150.png`,
-};
-
 const AFFILIATIONS: AffiliateGroup[] = [
   {
     category: "Eventi",
@@ -216,13 +207,6 @@ const AFFILIATIONS: AffiliateGroup[] = [
   },
 ];
 
-function getLogoSrc(name: string): string | undefined {
-  for (const key of Object.keys(LOGO_BY_NAME)) {
-    if (name.includes(key)) return LOGO_BY_NAME[key];
-  }
-  return undefined;
-}
-
 export default function AffiliazioniPage() {
   return (
     <div className="page-shell">
@@ -233,7 +217,7 @@ export default function AffiliazioniPage() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center max-w-6xl mx-auto">
-            <div className="order-2 lg:order-1 text-center lg:text-left">
+            <div className="order-2 lg:order-1 text-center flex flex-col items-center">
               <h1
                 id="affiliazioni-heading"
                 className="text-3xl sm:text-4xl font-bold brand-gradient-text mb-3 tracking-tight"
@@ -281,25 +265,12 @@ export default function AffiliazioniPage() {
                 </h2>
                 <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 list-none p-0 m-0">
                   {group.items.map((item) => {
-                    const logoSrc = getLogoSrc(item.name);
                     const tagline = item.short ?? item.description;
                     return (
                       <li key={item.name}>
                         <Card className="h-full flex flex-col">
                           <CardHeader className="pb-2">
                             <div className="flex items-start gap-3">
-                              {logoSrc && (
-                                <div className="relative size-12 shrink-0 rounded-lg overflow-hidden border border-border bg-muted">
-                                  <Image
-                                    src={logoSrc}
-                                    alt=""
-                                    width={48}
-                                    height={48}
-                                    className="object-contain p-1"
-                                    aria-hidden
-                                  />
-                                </div>
-                              )}
                               <div className="min-w-0 flex-1">
                                 <CardTitle className="text-base leading-tight">
                                   {item.name}

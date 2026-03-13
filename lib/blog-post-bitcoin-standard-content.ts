@@ -1,8 +1,12 @@
 /**
  * Contenuto HTML dell’articolo "Bitcoin standard" (fonte: marcocostanza.it, 11 Marzo 2026).
- * Stesse convenzioni degli altri post: sponsor box XTB, paragrafi con <br><br>.
+ * Stesse convenzioni degli altri post: video YouTube in testa, sponsor box XTB, paragrafi con <br><br>.
  */
+const YOUTUBE_VIDEO_ID = "_Czj-qiByrY";
+
 export const BITCOIN_STANDARD_CONTENT = `
+<div class="relative aspect-video w-full max-w-2xl mx-auto my-6 rounded-lg overflow-hidden"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}" title="YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe></div>
+
 <p>Se un domani vivessimo in un <strong>Bitcoin standard</strong>, la domanda "come prezzare le cose in Bitcoin?" avrebbe una risposta molto semplice: <strong>come oggi le prezzamo in euro</strong> 💶➡️₿. Cambia l'unità di conto, non la logica: si esprimono i prezzi in una valuta e si paga in quella valuta. La differenza vera è che Bitcoin, essendo globale, spingerebbe verso un sistema più uniforme e meno dipendente da tassi di cambio e confini 🌍.</p><br><br>
 
 <h2>Cos'è un satoshi e perché rende Bitcoin "usabile" nei prezzi</h2>

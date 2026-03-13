@@ -11,6 +11,7 @@ export type BlogPost = {
 };
 
 const YOUTUBE_VIDEO_ID = "4C8pqPTIaFI";
+const YOUTUBE_VIDEO_ID_BITCOIN_STANDARD = "_Czj-qiByrY";
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -26,6 +27,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Bitcoin standard: come si prezzano le cose, perché Bitcoin non si \"supera\" e cosa sta succedendo tra mining e AI",
     excerpt: "In un Bitcoin standard i prezzi si esprimono in sats come oggi in euro. Satoshi, Lightning, mining e AI: una guida chiara.",
     date: "2026-03",
+    thumbnail: `https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID_BITCOIN_STANDARD}/hqdefault.jpg`,
     content: BITCOIN_STANDARD_CONTENT,
   },
 ];

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { assets } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Progetti – Marco Costanza",
@@ -22,6 +24,7 @@ const PROGETTI = [
       "Formazione premium su Bitcoin e asset digitali. Trading Academy, report, formazione 1to1 e community. Per professionisti e aziende che vogliono operare in autonomia.",
     href: "https://whalestreet.website",
     label: "Vai a WhaleStreet",
+    logo: assets.progetti.whalestreet,
   },
   {
     name: "Bailout",
@@ -29,6 +32,7 @@ const PROGETTI = [
       "Masterclass Bitcoin in live: dall'acquisto alla custodia fino alla spesa. Percorso in 2 settimane con numero limitato di studenti. Realtà Bitcoin-only con network di professionisti.",
     href: "https://bailout.website",
     label: "Vai a Bailout",
+    logo: assets.progetti.bailout,
   },
 ];
 
@@ -43,7 +47,16 @@ export default function ProgettiPage() {
 
       <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
         {PROGETTI.map((p) => (
-          <Card key={p.name}>
+          <Card key={p.name} className="flex flex-col overflow-hidden">
+            <div className="relative w-full h-24 sm:h-28 flex items-center justify-center bg-muted/50 border-b border-border overflow-hidden">
+              <Image
+                src={p.logo}
+                alt={`Logo ${p.name}`}
+                fill
+                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
             <CardHeader>
               <CardTitle>{p.name}</CardTitle>
               <CardDescription className="text-base leading-relaxed">

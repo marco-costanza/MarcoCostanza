@@ -40,6 +40,10 @@ export const assets = {
     blocktime: `${IMG}/2025/06/16-9-1024x576.png`,
     playlist: `${IMG}/2025/06/Palylist-1024x576.png`,
   },
+  progetti: {
+    whalestreet: `${IMG}/whalestreet-logo.png`,
+    bailout: `${IMG}/bailout-logo.png`,
+  },
   trustpilot: `${IMG}/2025/06/Trustpilot-1024x576.png`,
   /** Hero recensioni: sostituire con immagine WOW (rating + recensioni) generata da Gemini se necessario */
   trustpilotHero: `${IMG}/2025/06/Trustpilot-1024x576.png`,

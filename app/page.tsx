@@ -22,7 +22,16 @@ export default function HomePage() {
         <div className="absolute left-0 right-0 bottom-0 premium-divider" aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center max-w-6xl mx-auto p-7 sm:p-10">
+          <div className="flex flex-col gap-12 max-w-6xl mx-auto p-7 sm:p-10">
+            <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-card shadow-glow-sm shrink-0">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/dxQcBs2blwk?rel=0"
+                title="Bitcoin e diritto al risparmio - Intervento Intergruppo parlamentare Bitcoin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
             <div className="text-center lg:text-left">
               <div className="mb-8 grid grid-cols-3 gap-3 text-left">
                 <div className="rounded-xl border border-primary/20 bg-background/70 px-3 py-2">
@@ -50,15 +59,6 @@ export default function HomePage() {
                   </Link>
                 </Button>
               </div>
-            </div>
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-card shadow-glow-sm shrink-0">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/dxQcBs2blwk?rel=0"
-                title="Bitcoin e diritto al risparmio - Intervento Intergruppo parlamentare Bitcoin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
             </div>
           </div>
         </div>

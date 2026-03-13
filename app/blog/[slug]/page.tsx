@@ -45,8 +45,8 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
         <div
           className="article-content prose prose-lg prose-invert max-w-none
-            prose-headings:font-semibold prose-headings:mt-6 prose-headings:mb-2 prose-headings:first:mt-0
-            prose-p:my-2 prose-ul:my-3 prose-li:my-0.5
+            prose-headings:font-semibold prose-headings:mt-4 prose-headings:mb-1.5 prose-headings:first:mt-0
+            prose-p:my-1.5 prose-ul:my-2 prose-li:my-0
             prose-a:text-accent prose-a:underline prose-a:decoration-accent/70 hover:prose-a:decoration-accent prose-a:font-medium
             prose-img:rounded-lg"
           dangerouslySetInnerHTML={{ __html: post.content }}

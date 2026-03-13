@@ -59,6 +59,16 @@ Ogni **push** su `main` farà un nuovo deploy automatico.
 
 ---
 
+## Contenuti blog (articoli da N8N)
+
+Gli articoli possono essere importati come HTML (es. da N8N). Alla renderizzazione viene applicata una pulizia automatica ai paragrafi "fonte":
+
+- **Regola:** se un paragrafo contiene solo un prefisso (es. "Fonte: ", "Fonti: ") seguito da link e un punto finale, in pagina si mostra **solo il contenuto con i link** (prefisso e punto rimossi).
+- **Prefissi attuali:** `Fonte: `, `Fonti: `, `Approfondimento e metodologia: `, `Panoramica aggiornata e leggibile: `.
+- **Dove aggiungere nuovi prefissi:** in `lib/clean-article-html.ts`, array `SOURCE_PREFIXES`. Aggiungere la stringa esatta (con spazio dopo i due punti se presente).
+
+---
+
 ## Riferimenti
 
 - **Dominio attuale:** marcocostanza.it (su Infomaniak, verrà spostato a Vercel)

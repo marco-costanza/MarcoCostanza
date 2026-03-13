@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS } from "@/lib/blog-posts";
+import { cleanSourceParagraphs } from "@/lib/clean-article-html";
 import { ChevronLeft } from "lucide-react";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -48,7 +49,7 @@ export default async function BlogPostPage({ params }: Props) {
             prose-headings:font-semibold prose-headings:mt-4 prose-headings:mb-1.5 prose-headings:first:mt-0
             prose-p:my-1.5 prose-ul:my-2 prose-li:my-0
             prose-img:rounded-lg"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: cleanSourceParagraphs(post.content) }}
         />
       </article>
     </div>

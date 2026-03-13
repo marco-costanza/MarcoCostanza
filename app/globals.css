@@ -128,6 +128,24 @@
     background: linear-gradient(90deg, transparent 0%, rgba(70, 111, 157, 0.5) 25%, rgba(255, 97, 2, 0.55) 50%, rgba(70, 111, 157, 0.5) 75%, transparent 100%);
   }
 
+  /* Articolo blog: spazi ridotti, sponsor box visibile su mobile */
+  .article-content .sponsor-box {
+    margin: 1rem 0;
+    overflow: visible;
+  }
+  .article-content .sponsor-box img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    object-fit: contain;
+  }
+  .article-content br {
+    display: block;
+    margin: 0.2em 0;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;

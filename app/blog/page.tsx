@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { BLOG_POSTS } from "@/lib/blog-posts";
 import {
   Card,
@@ -27,6 +28,20 @@ export default function BlogPage() {
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
           {BLOG_POSTS.map((post) => (
             <Card key={post.slug} className="h-full flex flex-col overflow-hidden">
+              {post.thumbnail && (
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="block relative w-full aspect-video bg-muted overflow-hidden border-b border-border"
+                >
+                  <Image
+                    src={post.thumbnail}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </Link>
+              )}
               <CardHeader>
                 <CardTitle className="text-base leading-tight">
                   <Link

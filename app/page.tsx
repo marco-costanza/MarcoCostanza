@@ -15,34 +15,15 @@ export default function HomePage() {
     <div className="page-shell">
       <section
         className="relative py-16 lg:py-24 border-b border-primary/20 bg-gradient-to-br from-background via-card/70 to-transparent overflow-hidden"
-        aria-labelledby="hero-heading"
+        aria-label="Hero"
       >
         <div className="absolute -top-16 -right-12 w-80 h-80 bg-primary/20 rounded-full filter blur-3xl opacity-70" aria-hidden />
         <div className="absolute top-8 right-44 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl opacity-55" aria-hidden />
         <div className="absolute left-0 right-0 bottom-0 premium-divider" aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="section-surface grid gap-12 lg:grid-cols-2 lg:gap-20 items-center max-w-6xl mx-auto p-7 sm:p-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center max-w-6xl mx-auto p-7 sm:p-10">
             <div className="text-center lg:text-left">
-              <h1 id="hero-heading" className="hero-heading text-foreground mb-6">
-                Chi è Marco Costanza
-              </h1>
-              <p className="text-foreground text-base sm:text-lg leading-relaxed mb-4">
-                Marco Costanza, anno 1994. Dopo 8 anni di lavoro come dipendente
-                Enel mi sono licenziato per dedicarmi a tempo pieno
-                all&apos;approfondimento della finanza e degli investimenti con un
-                focus dal 2017 su Bitcoin.
-              </p>
-              <p className="text-foreground text-base sm:text-lg leading-relaxed mb-4">
-                Nel 2024 entro nell&apos;intergruppo parlamentare &quot;Asset
-                Digitali, Blockchain e Bitcoin&quot;, portando il tema &quot;Bitcoin
-                è diritto al risparmio&quot; alla Camera dei Deputati.
-              </p>
-              <p className="text-foreground text-base sm:text-lg leading-relaxed mb-8">
-                Ad oggi posso vantare un pubblico di oltre 100.000 persone
-                distribuite sui principali social network e considerarmi uno tra
-                i maggiori esperti e divulgatori italiani di questa tecnologia.
-              </p>
               <div className="mb-8 grid grid-cols-3 gap-3 text-left">
                 <div className="rounded-xl border border-primary/20 bg-background/70 px-3 py-2">
                   <p className="text-lg font-bold text-foreground">100k+</p>
@@ -83,19 +64,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative py-16 lg:py-24 bg-muted/40 border-b border-primary/15" aria-labelledby="formazione-heading">
+      <section className="relative py-16 lg:py-24 bg-muted/40 border-b border-primary/15" aria-label="Formazione">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(rgb(33, 33, 33) 2px, transparent 2px)", backgroundSize: "32px 32px" }} aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-            <h2 id="formazione-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
-              Formazione
-            </h2>
-            <p className="text-lg text-muted-foreground font-medium">
-              Percorsi studiati per portarti da zero alla completa autonomia finanziaria e tecnologica.
-            </p>
-          </div>
-
           <div className="grid gap-6 sm:gap-8 md:grid-cols-3 max-w-6xl mx-auto">
             <Card className="flex flex-col h-full bg-card group">
               <div className="relative w-full aspect-video bg-muted overflow-hidden border-b border-border">

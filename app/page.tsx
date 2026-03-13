@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -103,11 +102,6 @@ export default function HomePage() {
               </div>
               <CardHeader>
                 <CardTitle>Formazione 1 to 1</CardTitle>
-                <CardDescription>
-                  Costruiamo insieme le tue competenze per muoverti con sicurezza
-                  tra finanza tradizionale ed il mondo Bitcoin. Qualunque sia il
-                  tuo dubbio lo risolveremo in videochiamate registrate.
-                </CardDescription>
               </CardHeader>
               <CardFooter>
                 <Button variant="accent" asChild className="w-full sm:w-auto mt-auto">
@@ -123,12 +117,6 @@ export default function HomePage() {
               </div>
               <CardHeader>
                 <CardTitle>Trading Academy</CardTitle>
-                <CardDescription>
-                  Formazione pratica e concreta per chi vuole gestire con
-                  consapevolezza il proprio denaro, comprendere le logiche della
-                  finanza e operare in modo intelligente tra investimento e
-                  speculazione. WhaleStreet.
-                </CardDescription>
               </CardHeader>
               <CardFooter>
                 <Button variant="accent" asChild className="w-full sm:w-auto mt-auto">
@@ -144,12 +132,6 @@ export default function HomePage() {
               </div>
               <CardHeader>
                 <CardTitle>Bitcoin Academy</CardTitle>
-                <CardDescription>
-                  Realtà Bitcoin-only formata da un network di professionisti.
-                  Uniamo la competenza tecnica, fiscale e strategica dei
-                  migliori formatori italiani offrendo formazione di alto livello
-                  per privati ed imprese. Bailout.
-                </CardDescription>
               </CardHeader>
               <CardFooter>
                 <Button variant="accent" asChild className="w-full sm:w-auto mt-auto">

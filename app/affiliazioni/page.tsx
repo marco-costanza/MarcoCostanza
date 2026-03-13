@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import {
   CalendarDays,
   GraduationCap,
@@ -15,7 +14,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { assets } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Affiliazioni – Marco Costanza",
@@ -217,26 +215,16 @@ export default function AffiliazioniPage() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center max-w-6xl mx-auto">
-            <div className="order-2 lg:order-1 text-center flex flex-col items-center">
+            <div className="text-center flex flex-col items-center max-w-2xl mx-auto">
               <h1
                 id="affiliazioni-heading"
-                className="text-3xl sm:text-4xl font-bold brand-gradient-text mb-3 tracking-tight"
+                className="text-3xl sm:text-4xl font-bold text-foreground mb-3 tracking-tight"
               >
                 Affiliazioni
               </h1>
               <p className="text-muted-foreground text-lg max-w-xl">
                 Link affiliati e codici sconto che utilizzo. Usandoli supporti il mio lavoro senza costi extra per te.
               </p>
-            </div>
-            <div className="order-1 lg:order-2 relative w-full aspect-video rounded-xl overflow-hidden border border-primary/30 bg-muted shadow-card shrink-0">
-              <Image
-                src={assets.cards.affiliazioni}
-                alt="Referral e codici sconto Marco Costanza"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
             </div>
           </div>
         </div>

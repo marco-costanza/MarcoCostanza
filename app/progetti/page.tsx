@@ -48,12 +48,12 @@ export default function ProgettiPage() {
       <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
         {PROGETTI.map((p) => (
           <Card key={p.name} className="flex flex-col overflow-hidden">
-            <div className="relative w-full h-24 sm:h-28 flex items-center justify-center bg-muted/50 border-b border-border overflow-hidden">
+            <div className="relative w-full h-24 sm:h-28 flex items-center justify-start bg-muted/50 border-b border-border overflow-hidden">
               <Image
                 src={p.logo}
                 alt={`Logo ${p.name}`}
                 fill
-                className="object-contain p-4"
+                className="object-contain object-left p-4"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>

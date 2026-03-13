@@ -134,11 +134,6 @@ export default function Navbar() {
               ))}
             </ul>
             <SocialLinks iconSize={22} />
-            <Button variant="accent" size="sm" asChild className="w-full">
-              <Link href="/contatti" onClick={() => setMobileOpen(false)}>
-                Contatti
-              </Link>
-            </Button>
           </div>
         )}
       </div>

@@ -27,18 +27,18 @@ export default function HomePage() {
               <h1 id="hero-heading" className="hero-heading text-foreground mb-6">
                 Chi è Marco Costanza
               </h1>
-              <p className="text-foreground leading-relaxed mb-4 text-base sm:text-lg font-medium">
+              <p className="text-foreground text-base sm:text-lg leading-relaxed mb-4">
                 Marco Costanza, anno 1994. Dopo 8 anni di lavoro come dipendente
                 Enel mi sono licenziato per dedicarmi a tempo pieno
                 all&apos;approfondimento della finanza e degli investimenti con un
                 focus dal 2017 su Bitcoin.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-foreground text-base sm:text-lg leading-relaxed mb-4">
                 Nel 2024 entro nell&apos;intergruppo parlamentare &quot;Asset
                 Digitali, Blockchain e Bitcoin&quot;, portando il tema &quot;Bitcoin
                 è diritto al risparmio&quot; alla Camera dei Deputati.
               </p>
-              <p className="text-foreground leading-relaxed mb-8 text-base sm:text-lg font-medium">
+              <p className="text-foreground text-base sm:text-lg leading-relaxed mb-8">
                 Ad oggi posso vantare un pubblico di oltre 100.000 persone
                 distribuite sui principali social network e considerarmi uno tra
                 i maggiori esperti e divulgatori italiani di questa tecnologia.
@@ -49,12 +49,12 @@ export default function HomePage() {
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Audience</p>
                 </div>
                 <div className="rounded-xl border border-primary/20 bg-background/70 px-3 py-2">
-                  <p className="text-lg font-bold text-foreground">2017</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wide">Focus BTC</p>
+                  <p className="text-lg font-bold text-foreground">1.000+</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">Clienti formati</p>
                 </div>
                 <div className="rounded-xl border border-primary/20 bg-background/70 px-3 py-2">
-                  <p className="text-lg font-bold text-foreground">2024</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wide">Parlamento</p>
+                  <p className="text-lg font-bold text-foreground">10+</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">Anni nel settore</p>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 sm:items-center">
@@ -167,8 +167,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay pointer-events-none" aria-hidden />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-card via-cypherpunk to-accent/20 text-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-card shadow-glow-accent-sm border border-white/15">
-            <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden mb-8 border border-white/10">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-card via-cypherpunk to-accent/20 text-foreground rounded-xl p-8 sm:p-10 md:p-16 text-center shadow-card shadow-glow-accent-sm">
+            <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden mb-8">
               <Image
                 src={assets.trustpilotHero}
                 alt="Recensioni e valutazione Trustpilot - Marco Costanza"

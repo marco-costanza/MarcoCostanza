@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { BLOG_POSTS } from "@/lib/blog-posts";
+import { getAllBlogPosts } from "@/lib/blog-repository";
 import {
   Card,
   CardDescription,
@@ -16,7 +16,9 @@ export const metadata: Metadata = {
   description: "Articoli e news su Bitcoin, mercati finanziari e divulgazione.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllBlogPosts();
+
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 page-shell section-surface p-6 sm:p-8">
       <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Blog</h1>
@@ -24,9 +26,9 @@ export default function BlogPage() {
         Articoli, analisi e aggiornamenti su Bitcoin e mercati.
       </p>
 
-      {BLOG_POSTS.length > 0 && (
+      {posts.length > 0 && (
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
-          {BLOG_POSTS.map((post) => (
+          {posts.map((post) => (
             <Card key={post.slug} className="h-full flex flex-col overflow-hidden">
               {post.thumbnail && (
                 <Link

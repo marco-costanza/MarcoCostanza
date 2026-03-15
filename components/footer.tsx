@@ -32,7 +32,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/blog" className="text-sm text-primary-foreground/75 hover:text-accent transition-colors">
-                  Blog
+                  Articoli
                 </Link>
               </li>
               <li>

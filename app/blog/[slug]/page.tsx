@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getBlogPostBySlug(slug);
   if (!post) return { title: "Articolo non trovato" };
   return {
-    title: `${post.title} – Blog – Marco Costanza`,
+    title: `${post.title} – Articoli – Marco Costanza`,
     description: post.excerpt,
   };
 }
@@ -35,7 +35,7 @@ export default async function BlogPostPage({ params }: Props) {
           className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
         >
           <ChevronLeft className="size-4" aria-hidden />
-          Torna al blog
+          Torna agli articoli
         </Link>
         <header className="mb-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">

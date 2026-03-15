@@ -11,7 +11,7 @@ import { assets } from "@/lib/assets";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/progetti", label: "Progetti" },
-  { href: "/blog", label: "Blog" },
+  { href: "/blog", label: "Articoli" },
   { href: "/affiliazioni", label: "Affiliazioni" },
   { href: "/contatti", label: "Contatti" },
 ];

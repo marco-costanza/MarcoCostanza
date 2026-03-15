@@ -12,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Blog – Marco Costanza",
+  title: "Articoli – Marco Costanza",
   description: "Articoli e news su Bitcoin, mercati finanziari e divulgazione.",
 };
 
@@ -21,7 +21,7 @@ export default async function BlogPage() {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 page-shell section-surface p-6 sm:p-8">
-      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Blog</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 tracking-tight">Articoli</h1>
       <p className="text-lg text-muted-foreground max-w-2xl mb-10 sm:mb-12">
         Articoli, analisi e aggiornamenti su Bitcoin e mercati.
       </p>

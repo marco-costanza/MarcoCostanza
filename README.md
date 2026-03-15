@@ -10,7 +10,7 @@ Sito personale vetrina di **Marco Costanza**: formazione, divulgazione e progett
 - **Chi sono** — Bio completa, timeline, milestones
 - **Servizi** — Formazione 1to1, WhaleStreet Academy, Bailout Academy
 - **Progetti** — WhaleStreet, Bailout, BlockTime e altri
-- **Blog** — Articoli e news
+- **Articoli** — Articoli e news (contenuti in `content/articoli/`)
 - **Affiliazioni** — Codici sconto e partnership
 - **Eventi** — Masterclass, conferenze, apparizioni
 - **Contatti** — Email, social, form contatti
@@ -59,13 +59,13 @@ Ogni **push** su `main` farà un nuovo deploy automatico.
 
 ---
 
-## Contenuti blog (articoli da N8N)
+## Contenuti articoli (file-based, n8n → GitHub)
 
-Gli articoli possono essere importati come HTML (es. da N8N). Alla renderizzazione viene applicata una pulizia automatica ai paragrafi "fonte":
+Gli articoli vivono in **`content/articoli/`**: un file `.html` e un `.meta.json` per ogni articolo (stesso slug). Il sito li rileva a build time senza manifest.
 
-- **Regola:** se un paragrafo contiene solo un prefisso (es. "Fonte: ", "Fonti: ") seguito da link e un punto finale, in pagina si mostra **solo il contenuto con i link** (prefisso e punto rimossi).
-- **Prefissi attuali:** `Fonte: `, `Fonti: `, `Approfondimento e metodologia: `, `Panoramica aggiornata e leggibile: `.
-- **Dove aggiungere nuovi prefissi:** in `lib/clean-article-html.ts`, array `SOURCE_PREFIXES`. Aggiungere la stringa esatta (con spazio dopo i due punti se presente).
+- **Formato:** vedi [content/articoli/README.md](content/articoli/README.md)
+- **Workflow n8n:** genera `slug.html` e `slug.meta.json`, push su GitHub → Vercel build automatico
+- **Pulizia paragrafi "fonte":** in `lib/clean-article-html.ts` — prefissi come "Fonte: ", "Fonti: " vengono rimossi per mostrare solo i link
 
 ---
 

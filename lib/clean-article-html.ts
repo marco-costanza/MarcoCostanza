@@ -13,18 +13,28 @@ export const SOURCE_PREFIXES = [
   "Panoramica aggiornata e leggibile: ",
 ] as const;
 
+const YOUTUBE_EMBED_HTML = (videoId: string) =>
+  `<div class="relative aspect-video w-full max-w-2xl mx-auto my-6 rounded-lg overflow-hidden"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}" title="YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe></div>`;
+
 // Trasforma <figure> con URL YouTube semplice in un iframe responsive
 function transformYouTubeFigures(html: string): string {
-  const YT_FIGURE_REGEX =
+  // 1) figure con solo URL (es. https://youtube.com/live/ID)
+  const YT_FIGURE_URL_REGEX =
     /<figure[^>]*>[\s\n]*https?:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?v=|live\/)|youtu\.be\/)([a-zA-Z0-9_-]+)[\s\n]*<\/figure>/gi;
 
-  return html.replace(YT_FIGURE_REGEX, (_match, videoId: string) => {
-    const id = String(videoId);
-    return `
-<div class="relative aspect-video w-full max-w-2xl mx-auto my-6 rounded-lg overflow-hidden">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${id}" title="YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
-</div>`.trim();
-  });
+  let out = html.replace(YT_FIGURE_URL_REGEX, (_match, videoId: string) =>
+    YOUTUBE_EMBED_HTML(String(videoId))
+  );
+
+  // 2) figure con div + iframe YouTube (WordPress oEmbed, dimensioni fisse tipo width="500" height="281")
+  const YT_FIGURE_IFRAME_REGEX =
+    /<figure[^>]*>[\s\S]*?youtube\.com\/embed\/([a-zA-Z0-9_-]+)[\s\S]*?<\/figure>/gi;
+
+  out = out.replace(YT_FIGURE_IFRAME_REGEX, (_match, videoId: string) =>
+    YOUTUBE_EMBED_HTML(String(videoId))
+  );
+
+  return out;
 }
 
 // Riscrive URL delle immagini sponsor WordPress in path locali quando disponibili

@@ -208,9 +208,8 @@ const AFFILIATIONS: AffiliateGroup[] = [
 export default function AffiliazioniPage() {
   return (
     <div className="page-shell">
-      {/* Hero con immagine e CTA */}
       <section
-        className="relative border-b border-primary/20 overflow-hidden"
+        className="relative border-b border-primary/15 bg-secondary/60 overflow-hidden"
         aria-labelledby="affiliazioni-heading"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
@@ -230,7 +229,6 @@ export default function AffiliazioniPage() {
         </div>
       </section>
 
-      {/* Griglia categorie con icone e card */}
       <div
         id="categorie"
         className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-6xl scroll-mt-8"
@@ -274,10 +272,10 @@ export default function AffiliazioniPage() {
                             <Button variant="default" size="sm" className="w-full sm:w-auto" asChild>
                               <Link
                                 href={item.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2"
                                 aria-label={`Apri ${item.name}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 Apri
                                 <ExternalLink className="size-3.5" aria-hidden />
@@ -296,6 +294,9 @@ export default function AffiliazioniPage() {
 
         <p className="mt-12 text-xs text-muted-foreground max-w-2xl">
           Alcuni link sono affiliati: posso ricevere una commissione se li usi. Valuta sempre in autonomia se il servizio è adatto a te.
+        </p>
+        <p className="mt-2 text-xs text-muted-foreground max-w-2xl">
+          Il merchandising ufficiale, quando disponibile, viene segnalato nei miei contenuti e linkato qui tra le affiliazioni rilevanti.
         </p>
       </div>
     </div>

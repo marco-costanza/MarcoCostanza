@@ -10,9 +10,11 @@ import { assets } from "@/lib/assets";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/servizi", label: "Servizi" },
   { href: "/progetti", label: "Progetti" },
-  { href: "/blog", label: "Articoli" },
-  { href: "/affiliazioni", label: "Affiliazioni" },
+  { href: "/blog", label: "Contenuti" },
+  { href: "/affiliazioni", label: "Affiliazioni & Merch" },
+  { href: "/chi-sono", label: "Chi sono" },
   { href: "/contatti", label: "Contatti" },
 ];
 
@@ -21,7 +23,7 @@ export default function Navbar() {
   const [contactsOpen, setContactsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-primary/20 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/65">
+    <nav className="sticky top-0 z-50 w-full border-b border-primary/15 bg-background/85 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link

@@ -99,3 +99,13 @@ To check whether embeddings exist, inspect `.gitnexus/meta.json` — the `stats.
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
+
+## Cursor Cloud specific instructions
+
+This is a self-contained Next.js 15 portfolio site with no database, no external APIs, and no environment variables required.
+
+- **Dev server**: `npm run dev` — runs on **port 3002** (configured in `package.json`).
+- **Lint**: `npm run lint` — uses `next lint`. On first run it may prompt to create `.eslintrc.json`; pass `--strict` flag for non-interactive setup.
+- **Build**: `npm run build` — produces a static/SSG build; all 22 pages generate successfully.
+- **Content**: Articles live in `content/articoli/` as `.html` + `.meta.json` pairs; blog posts are in `lib/blog-posts.ts`. No CMS or API needed.
+- **No `.env` required**: The site has zero secrets or API keys for local development.

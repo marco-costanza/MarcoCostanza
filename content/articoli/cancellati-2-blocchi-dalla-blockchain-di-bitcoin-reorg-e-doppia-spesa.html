@@ -1,0 +1,49 @@
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+<div class="ast-oembed-container " style="height: 100%;"><iframe title="Cancellati 2 BLOCCHI dalla blockchain di BITCOIN?! - REORG e Doppia Spesa" width="500" height="281" src="https://www.youtube.com/embed/ZFMufN-XxTY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</figure>
+<p>Il 23 marzo 2026 su Bitcoin si è verificata una <strong>riorganizzazione di due blocchi</strong> (in gergo <em>reorg</em>) e online si è diffusa la solita paura: “Bitcoin si è rotto”, “si può fare double spend”, “non è sicuro”. In realtà è un evento previsto dal protocollo ✅ e, se capisci come funziona la scelta della catena “giusta”, diventa tutto molto semplice. 🧠</p>
+<h2>Prima cosa: cos’è una blockchain (in pratica) 🧱</h2>
+<p>Bitcoin registra la “storia” delle transazioni in una catena di blocchi: ogni <strong>blocco</strong> contiene un insieme di transazioni e punta al blocco precedente tramite un identificatore crittografico (l’<em>hash</em>) 🔗. Questo collegamento rende estremamente costoso cambiare il passato, perché se modifichi un blocco devi poi rifare il lavoro anche su tutti quelli successivi. ⚙️</p>
+<h3>Mempool: il “limbo” prima della conferma ⏳</h3>
+<p>Prima di finire in un blocco, le transazioni stanno nella <strong>mempool</strong> (a volte scritta “mpool”): una specie di sala d’attesa 🧾. I miner scelgono quali transazioni inserire, tipicamente dando priorità a quelle con commissioni più alte. 💰</p>
+<div class="sponsor-box" style="text-align:center; margin: 20px 0;"><a href="https://geolink.xtb.com/83DJ8" target="_blank" rel="noopener noreferrer sponsored"><img decoding="async" src="https://marcocostanza.it/wp-content/uploads/2026/01/XTB_web.jpg" alt="XTB" loading="lazy" style="max-width:100%; height:auto;" /></a></div>
+<h2>Conferme: cosa significa “1/6, 2/6, 6/6” ✅</h2>
+<p>Quando una transazione entra in un blocco ha <strong>1 conferma</strong>. Ogni blocco successivo aggiunto “sopra” quel blocco aumenta le conferme: 2, 3, 4… 📈. Più conferme ci sono, più diventa improbabile che quella transazione venga rimossa da un cambio temporaneo della catena. 🔒</p>
+<p>Punto chiave: su Bitcoin <strong>non esiste una “finalità assoluta”</strong> al 100% in senso matematico 🧮. Esiste però una sicurezza pratica enorme: dopo un certo numero di blocchi (tipicamente <strong>6 conferme</strong>) la probabilità di riorganizzazione diventa così piccola da essere, nella vita reale, trascurabile. 🧱</p>
+<h2>Perché possono esistere due blocchi “allo stesso altezza” 🥊</h2>
+<p>Bitcoin è un sistema distribuito 🌍: i miner nel mondo competono per trovare il prossimo blocco. Può capitare che <strong>due miner trovino un blocco quasi nello stesso momento</strong> ⏱️. Risultato: per un breve periodo esistono <strong>due versioni della catena</strong> con lo stesso “numero di blocco”, ma con contenuti (transazioni) leggermente diversi. 🧩</p>
+<h3>Qui nasce il dubbio: e se le transazioni sono in conflitto? ⚠️</h3>
+<p>In teoria, in due blocchi diversi potrebbero finire due transazioni che spendono lo stesso UTXO (la stessa “moneta”) 💥. È il concetto di <strong>double spend</strong>: tentare di spendere lo stesso Bitcoin due volte (es. invio a Tizio in una catena e a Caio nell’altra). Ma Bitcoin ha una regola semplice e robusta per decidere quale storia diventa quella vera. 🧭</p>
+<h2>La regola che risolve tutto: vince la catena con più Proof of Work 🏁</h2>
+<p>Quando c’è un fork temporaneo, la rete segue la catena con <strong>più lavoro accumulato</strong> (più <em>Proof of Work</em>) 🛠️. Spesso viene spiegata come “la catena più lunga”, ed è una buona semplificazione perché, di norma, più blocchi = più lavoro totale. 📚</p>
+<p>Quando una delle due catene riceve un blocco in più, diventa la catena “principale” 🥇. L’altra perde la gara e i suoi blocchi diventano <strong>blocchi orfani</strong> (<em>orphan blocks</em>) 👻: non vengono più considerati parte della storia valida e le transazioni contenute in quei blocchi tornano nello stato precedente (spesso rientrano in mempool se ancora valide). 🔄</p>
+<h2>Cosa è successo il 23 marzo 2026: reorg di due blocchi 🧨</h2>
+<p>L’evento discusso è stato una <strong>riorganizzazione di 2 blocchi</strong>: due catene hanno convissuto per poco, poi una ha accumulato più lavoro e l’altra è stata scartata. 🧱➡️🧱</p>
+<p>Il dettaglio che ha fatto parlare è che una mining pool ha prodotto diversi blocchi in sequenza 🏭, riuscendo a “spingere avanti” la propria catena e rendendola quella dominante. Questo non implica controllo del protocollo o “presa di potere” 👀: è una dinamica probabilistica possibile, specialmente con hashrate elevato e propagazione di rete non perfettamente simultanea. 🌐</p>
+<h2>È un problema per la sicurezza di Bitcoin? No (se si usano le conferme) 🛡️</h2>
+<p>Una reorg di 1 blocco capita regolarmente 📆 (nell’ordine di qualche volta al mese, a seconda dei periodi). Reorg di 2 blocchi sono più rare, ma restano compatibili con il normale funzionamento. ✅</p>
+<p>Il rischio pratico nasce solo se qualcuno accetta pagamenti con <strong>0 conferme</strong> (zero-conf) o con pochissime conferme 😬. Se consegni un bene dopo 0–1 conferma, e poi quella transazione finisce nel ramo che viene orfanato, potresti ritrovarti senza pagamento. 📦❌</p>
+<h3>La regola d’oro: attendere conferme adeguate ⏱️</h3>
+<ul>
+<li><strong>0 conferme</strong>: utile solo in contesti a rischio molto basso o con mitigazioni specifiche ⚠️</li>
+<li><strong>1–2 conferme</strong>: meglio, ma ancora esposto a riorganizzazioni rare 🧯</li>
+<li><strong>6 conferme</strong>: standard storico per importi importanti, sicurezza pratica altissima 🔒</li>
+</ul>
+<p>Per questo molti exchange mostrano “0/6… 1/6… 2/6…”: è la rete che, blocco dopo blocco, rende sempre più improbabile un rollback. 📊</p>
+<h2>E Lightning Network? ⚡</h2>
+<p>Lightning Network è un <strong>layer sopra Bitcoin</strong>: apre e chiude canali <em>on-chain</em> (quindi lì le conferme contano) 🔗, ma una volta che il canale è aperto e ben confermato, i pagamenti dentro il canale sono <strong>istantanei</strong> e “atomici” ⚡: o avvengono o non avvengono, senza rimanere in un limbo come può succedere con transazioni in attesa in mempool. ✅</p>
+<p>In pratica: per l’utente medio che usa wallet Lightning custodial o semi-custodial 📱, molti dettagli restano invisibili; per chi gestisce canali e liquidità, la prudenza è la stessa delle transazioni on-chain quando si apre/chiude. 🧠</p>
+<h2>È già successo in passato? Sì, anche in modo molto più “pesante” 🕰️</h2>
+<p>Riorganizzazioni di 2 blocchi sono già capitate anche in altri momenti recenti (ad esempio nel 2023) 📌. Se poi torniamo indietro di molti anni, ci sono stati eventi eccezionali dovuti a bug o incompatibilità tra versioni software (2013) 🐛, e perfino una grande riorganizzazione nel 2010 legata a un errore grave che permetteva di creare quantità assurde di Bitcoin, poi corretta con un intervento storico. 🧯</p>
+<blockquote>
+<p>Messaggio importante 📣: una reorg non è “Bitcoin che si rompe”. È il protocollo che, davanti a due storie temporanee, sceglie automaticamente quale storia è quella vera: quella con più lavoro accumulato.</p>
+</blockquote>
+<div class="sponsor-box" style="text-align:center; margin: 20px 0;"><a href="https://geolink.xtb.com/83DJ8" target="_blank" rel="noopener noreferrer sponsored"><img decoding="async" src="https://marcocostanza.it/wp-content/uploads/2026/01/XTB_web.jpg" alt="XTB" loading="lazy" style="max-width:100%; height:auto;" /></a></div>
+<h2>Cosa significa per te (e per le tue tasche) 💼</h2>
+<ul>
+<li>Se ricevi un pagamento importante, <strong>aspetta conferme</strong> adeguate (spesso 6) 🧾</li>
+<li>Diffida di chi vende “pagamenti istantanei on-chain senza rischi” 🚫</li>
+<li>Ricorda: la sicurezza di Bitcoin aumenta con il tempo e con la profondità del blocco nella catena 🧱</li>
+<li>Le reorg brevi fanno parte della normalità di una rete globale decentralizzata 🌍</li>
+</ul>
+<p>In sintesi: l’evento del 23 marzo 2026 mostra che Bitcoin non si basa su fiducia o autorità centrale, ma su regole verificabili e su incentivi economici 🧠. Le riorganizzazioni brevi sono un “effetto collaterale” previsto del consenso Proof of Work, e la pratica delle conferme esiste proprio per rendere irrilevante questo rischio nella vita reale. ✅</p>
